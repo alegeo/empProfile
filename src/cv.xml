@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cv
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='src/cv.xsd'>
+    <name>Alexandra Georgoudaki</name>
+	<address>Kungshamra 55B, Sonla, 17070, Sweden</address>
+	<telephone>0737217170</telephone>
+	<emails>alegeo@kth.se</email>
+	<education>Bachelor Degree in Information Technology and Telecommunications (4 years), 
+                   2011</education>
+	<languages>English, Greek, Swedish</languages>
+	<interests>Books, Movies, Photography, Digital Design</interests>
+        <jobType>>Permanent</jobType>   <!-- permanent, part time, contract -->
+        <qualifications>Driving license (car)</qualifications>
+	<references>Available upon request</references>
+        <desiredPosition>Software Developer, Web developer, Web designer</desiredPosition>
+        <motivation>I am suitable for the position of a software developer because I enjoy 
+                    the process of solving problems.</motivation>
+</cv>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="profile">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="name" type="xsd:string"/>
+    <!-- cv part should it include contact information or something special? -->
+    <!-- I'm not sure. We do have this kind of info inside the CV, so maybe it's not needed-->
+                <xsd:element name="university" type="xsd:string"/>
+                <xsd:element name="program" type="xsd:string"/>
+    <!-- When you say program you mean what you studied at the university??-->
+                <xsd:element name="GPA" type="xsd:decimal" minOccurs="0" />
+	<!-- ADD -->
+			
+				
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>  
+</xsd:schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="cv">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="name" type="xsd:string"/>
+                <xsd:element name="address" type="xsd:string"/>
+                <xsd:element name="telephone" type="xsd:string"/>
+                <xsd:element name="emails" type="xsd:string" />
+                <xsd:element name="education" type="xsd:string"/>
+                <xsd:element name="languages" type="xsd:string"/>
+                <xsd:element name="interests" type="xsd:string"/>
+                <xsd:element name="jobType" type="xsd:string"/>
+                <xsd:element name="qualifications" type="xsd:string"/>
+                <xsd:element name="references" type="xsd:string"/>
+                <xsd:element name="desiredPosition" type="xsd:string"/> 
+                <xsd:element name="motivation" type="xsd:string"/>   
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>              
+</xsd:schema>

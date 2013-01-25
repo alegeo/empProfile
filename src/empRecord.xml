@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<empRecord
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="empRecord.xsd">
+    <name>Alexandra Georgoudaki</name>
+    <company>Google Inc.</company>
+    <duration>18 months</duration>
+    <year>2011</year>
+    <positions>Software Developer</position>
+</empRecord>

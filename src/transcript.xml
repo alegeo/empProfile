@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transcript
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='transcript.xsd'>
+    <name>Alexandra Georgoudaki</name>
+    <university>KTH</university>
+    <program>Master Software Engineering of Distributed Systems</program>
+    <issue-date>2012-12-23</issue-date>
+    <courses>
+        <course>
+            <code>IK2211</code>
+            <title>Distributed Systems, Basic Course</title>          
+            <credits>7.5</credits>
+            <grade>A</grade>
+        </course>
+        <course>
+            <code>IB2210</code>
+            <title>Modern Methods in Software Engineering</title>
+            <credits>7.5</credits>
+            <grade>A</grade>
+        </course>
+        <course>
+            <code>IB2210</code>
+            <title>Distributed Artificial Intelligence and Intelligent Agents</title>
+            <credits>7.5</credits>
+            <grade>A</grade>
+        </course>
+        <course>
+            <code>ID1234</code>
+            <title>Network Programming in Java</title>
+            <credits>6</credits>
+            <grade>B</grade>
+        </course>
+    </courses>
+
+</transcript>
