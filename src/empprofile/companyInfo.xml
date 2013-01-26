@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<companyInfo xmlns="http://namespace.profile.com/companyInfo/com">    
-	<company>
-		<name>Nokia</name>
-		<category>Telecommunications</category>
-		<founders>Fredrik Idestam, Leo Mechelin</founders>
-		<ceo>Stephen Elop</ceo>
-		<location>Espoo, Finland</location>
-		<employees>139,000</employees>
-		<contact>+358 7180 08000</contact>
-	</company>
+<companyInfo xmlns:com="http://namespace.profile.com/companyInfo">    
+	<com:company>
+		<com:name>Nokia</com:name>
+		<com:category>Telecommunications</com:category>
+		<com:founders>Fredrik Idestam, Leo Mechelin</com:founders>
+		<com:ceo>Stephen Elop</com:ceo>
+		<com:location>Espoo, Finland</com:location>
+		<com:employees>139,000</com:employees>
+		<com:contact>+358 7180 08000</com:contact>
+	</com:company>
 
-	<company>
-		<name>Oracle</name>
-		<category>Enterprise software, Computer hardware</category>
-		<founders>Larry Ellison, Bob Miner, Ed Oates</founders>
-		<ceo>Larry Ellison </ceo>
-		<location>500 Oracle Parkway, Redwood Shores, Redwood City, California, United States</location>
-		<employees></employees>
-		<contact>1-800-633-0738</contact>
-	</company>
+	<com:company>
+		<com:name>Oracle</com:name>
+		<com:category>Enterprise software, Computer hardware</com:category>
+		<com:founders>Larry Ellison, Bob Miner, Ed Oates</com:founders>
+		<com:ceo>Larry Ellison </com:ceo>
+		<com:location>500 Oracle Parkway, Redwood Shores, Redwood City, California, United States</com:location>
+		<com:employees></com:employees>
+		<com:contact>1-800-633-0738</com:contact>
+	</com:company>
 	
-	<company>
-		<name>Google Inc.</name>
-		<category>Internet, Computer software</category>
-		<founders>Larry Page, Sergey Brin</founders>
-		<ceo>Larry Page</ceo>
-		<location>Googleplex, Mountain View, California, United States</location>
-		<employees>53,546</employees>
-		<contact>....</contact>
-	</company>
+	<com:company>
+		<com:name>Google Inc.</com:name>
+		<com:category>Internet, Computer software</com:category>
+		<com:founders>Larry Page, Sergey Brin</com:founders>
+		<com:ceo>Larry Page</com:ceo>
+		<com:location>Googleplex, Mountain View, California, United States</com:location>
+		<com:employees>53,546</com:employees>
+		<com:contact>....</com:contact>
+	</com:company>
 	
-	<company>
-		<name>Facebook, Inc.</name>
-		<category>Social networking services</category>
-		<founders>Mark Zuckerberg, Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, Chris Hughes</founders>
-		<ceo>Mark Zuckerberg</ceo>
-		<location>Menlo Park, California, United States</location>
-		<employees>4,331 </employees>
-		<contact>press@fb.com</contact>
-	</company>
+	<com:company>
+		<com:name>Facebook, Inc.</com:name>
+		<com:category>Social networking services</com:category>
+		<com:founders>Mark Zuckerberg, Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, Chris Hughes</com:founders>
+		<com:ceo>Mark Zuckerberg</com:ceo>
+		<com:location>Menlo Park, California, United States</com:location>
+		<com:employees>4,331 </com:employees>
+		<com:contact>press@fb.com</com:contact>
+	</com:company>
 </companyInfo>

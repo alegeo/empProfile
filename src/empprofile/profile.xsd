@@ -44,7 +44,7 @@ namespace="http://namespace.profile.com/transcript/t" />
                 <xsd:element name="empRecord" minOccurs="0" maxOccurs="unbounded">
                         <xsd:complexType>
                                 <xsd:sequence>
-                                        <xsd:element name="company"/>
+                                        <xsd:element name="name" type="xsd:string"/>
                                         <xsd:element name="category" type="xsd:string"/>
                                         <xsd:element name="contact" type="xsd:string"/>          
                                         <xsd:element name="year" type="xsd:int"/>
@@ -57,7 +57,7 @@ namespace="http://namespace.profile.com/transcript/t" />
                 <xsd:element name="companyInfo">
                         <xsd:complexType>
                                 <xsd:sequence>
-                                        <xsd:element name="name" type="xsd:string"/>
+                                        <xsd:element name="company_name" type="xsd:string"/>
                                         <xsd:element name="category" type="xsd:string"/>
                                         <xsd:element name="founders" type="xsd:string"/>
                                         <xsd:element name="ceo" type="xsd:string"/>
