@@ -20,6 +20,8 @@ namespace="http://namespace.profile.com/transcript" />
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element name="name" type="xsd:string"/>
+                <!-- shoule we just put the things like this? -->
+                <xsd:element name="cv_info" type="c:cvType"/>
 				<xsd:element name="telephone" type="xsd:string" maxOccurs="unbounded"/>
 				<xsd:element name="email" type="xsd:string" maxOccurs="unbounded"/>			
 				<xsd:element name="desiredPosition" type="xsd:string"/>
