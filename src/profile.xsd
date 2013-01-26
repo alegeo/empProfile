@@ -19,7 +19,7 @@ namespace="http://namespace.profile.com/transcript/t" />
     <xsd:element name="profile">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="cv_info" type="c:cvType"/>
+                <xsd:element name="cv_info" type="cv:cvType"/>
                                 <xsd:element name="name" type="xsd:string"/>
                                 <xsd:element name="address" type="xsd:string"/>
 				<xsd:element name="telephone" type="xsd:string" maxOccurs="unbounded"/>
