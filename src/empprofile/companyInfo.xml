@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <companyInfo xmlns="http://namespace.profile.com/companyInfo/com">    
 	<company>
-		<name lang="en">Nokia</name>
+		<name>Nokia</name>
 		<category>Telecommunications</category>
 		<founders>Fredrik Idestam, Leo Mechelin</founders>
 		<ceo>Stephen Elop</ceo>
@@ -11,7 +11,7 @@
 	</company>
 
 	<company>
-		<name lang="en">Oracle</name>
+		<name>Oracle</name>
 		<category>Enterprise software, Computer hardware</category>
 		<founders>Larry Ellison, Bob Miner, Ed Oates</founders>
 		<ceo>Larry Ellison </ceo>
@@ -21,7 +21,7 @@
 	</company>
 	
 	<company>
-		<name lang="en">Google Inc.</name>
+		<name>Google Inc.</name>
 		<category>Internet, Computer software</category>
 		<founders>Larry Page, Sergey Brin</founders>
 		<ceo>Larry Page</ceo>
@@ -31,7 +31,7 @@
 	</company>
 	
 	<company>
-		<name lang="en">Facebook, Inc.</name>
+		<name>Facebook, Inc.</name>
 		<category>Social networking services</category>
 		<founders>Mark Zuckerberg, Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, Chris Hughes</founders>
 		<ceo>Mark Zuckerberg</ceo>
