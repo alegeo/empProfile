@@ -3,9 +3,10 @@
 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 targetNamespace="http://namespace.profile.com/companyInfo/com">
     <xsd:element name="companyInfo">
+        <xsd:element name="company">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="name" type="xsd:string"/>
+                <xsd:element name="companyName" type="xsd:string"/>
                 <xsd:element name="category" type="xsd:string"/>
                 <xsd:element name="founders" type="xsd:string"/>
                 <xsd:element name="ceo" type="xsd:string"/>
@@ -13,5 +14,6 @@ targetNamespace="http://namespace.profile.com/companyInfo/com">
                 <xsd:element name="contact" type="xsd:string"/>
             </xsd:sequence>
         </xsd:complexType>
+        </xsd:element>
     </xsd:element>              
 </xsd:schema>

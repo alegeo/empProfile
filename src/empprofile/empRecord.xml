@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <empRecord xmlns="http://namespace.profile.com/empProfile/e"
     id="A12">
-    <name>Alexandra Georgoudaki</name>
-    <company>Google Inc.</company>
+    <empName>Alexandra Georgoudaki</empName>
+    <workedAt>Google Inc.</workedAt>
     <duration>18 months</duration>
     <year>2011</year>
     <position>Software Developer</position>
