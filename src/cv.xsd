@@ -10,12 +10,11 @@ elementFormDefault ="qualifed">
                 <xsd:element name="telephone" type="xsd:string"/>
                 <xsd:element name="email" type="xsd:string" />
                 <xsd:element name="education" type="xsd:string"/>
-                <xsd:element name="language" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
-                <xsd:element name="interests" type="xsd:string"/>
-                <xsd:element name="jobType" type="xsd:string"/>
+                <xsd:element name="language" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>                
                 <xsd:element name="qualifications" type="xsd:string"/>
-                <xsd:element name="references" type="xsd:string"/>
+                <xsd:element name="jobType" type="xsd:string"/>
                 <xsd:element name="desiredPosition" type="xsd:string"/> 
+                <xsd:element name="references" type="xsd:string"/>
                 <xsd:element name="motivation" type="xsd:string"/>   
             </xsd:sequence>
         </xsd:complexType>              

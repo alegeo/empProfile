@@ -9,13 +9,10 @@
 	<education>Bachelor Degree in Information Technology and Telecommunications (4 years), 
                    2011</education>
 	<language>English</language>
-	<language>Greek</language>
-	<language>Swedish</language>
-	<interests>Books, Movies, Photography, Digital Design</interests>
-        <jobType>>Permanent</jobType>   <!-- permanent, part time, contract -->
         <qualifications>Driving license (car)</qualifications>
-	<references>Available upon request</references>
+        <jobType>>Permanent</jobType>   <!-- permanent, part time, contract -->
         <desiredPosition>Software Developer, Web developer, Web designer</desiredPosition>
+        <references>Available upon request</references>  
         <motivation>I am suitable for the position of a software developer because I enjoy 
                     the process of solving problems.</motivation>
 </cv>
