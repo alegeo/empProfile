@@ -1,67 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+<xsd:schema xmlns="http://namespace.profile.com/profile"
 	targetNamespace="http://namespace.profile.com/profile"
-	xmlns:e="http://namespace.profile.com/empRecord"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"	
+        xmlns:e="http://namespace.profile.com/empRecord"
 	xmlns:cv="http://namespace.profile.com/cv"
 	xmlns:com="http://namespace.profile.com/companyInfo"
 	xmlns:t="http://namespace.profile.com/transcript"
 	>
 <xsd:import schemaLocation="empRecord.xsd"
-namespace="http://namespace.profile.com/empRecord" />
+namespace="http://namespace.profile.com/empRecord/e" />
 <xsd:import schemaLocation="cv.xsd"
 namespace="http://namespace.profile.com/cv" />
 <xsd:import schemaLocation="companyInfo.xsd"
-namespace="http://namespace.profile.com/companyInfo" />
+namespace="http://namespace.profile.com/companyInfo/com" />
 <xsd:import schemaLocation="transcript.xsd"
-namespace="http://namespace.profile.com/transcript" />
+namespace="http://namespace.profile.com/transcript/t" />
 
     <xsd:element name="profile">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="name" type="xsd:string"/>
-                <!-- shoule we just put the things like this? -->
                 <xsd:element name="cv_info" type="c:cvType"/>
+                                <xsd:element name="name" type="xsd:string"/>
+                                <xsd:element name="address" type="xsd:string"/>
 				<xsd:element name="telephone" type="xsd:string" maxOccurs="unbounded"/>
 				<xsd:element name="email" type="xsd:string" maxOccurs="unbounded"/>			
-				<xsd:element name="desiredPosition" type="xsd:string"/>
-				<xsd:element name="language" type="xsd:string" maxOccurs="unbounded" />
-    <!-- cv part should it include contact information or something special? -->
-    <!-- I'm not sure. We do have this kind of info inside the CV, so maybe it's not needed-->
-	<!-- xml corresponding to this xsd is to be generated/putput by the programms we are working and 
-		the profile should gather all the information -->
 				<xsd:element name="education" minOccurs="0">
 					<xsd:complexType>
 						<xsd:sequence>
 							<xsd:element name="university" type="xsd:string"/>
 							<xsd:element name="program" type="xsd:string"/>
-	<!-- When you say program you mean what you studied at the university??-->
-	<!-- yes, like. bachelor, master or something -->
 							<xsd:element name="gpa" type="xsd:decimal" minOccurs="0" />
 						</xsd:sequence>
 					</xsd:complexType>
 				</xsd:element>	
-				<xsd:element name="motivation" type="xsd:string"/>   
-				<xsd:element name="place_desired" type="xsd:string"/>
-				<xsd:element name="jobType" type="xsd:string"/>
-				<xsd:element name="qualifications" type="xsd:string"/>
-                <xsd:element name="references" type="xsd:string"/>
-				<xsd:element name="empRecord" minOccurs="0" maxOccurs="unbounded">
-					<xsd:complexType>
-						<xsd:sequence>
-							<xsd:element name="company">
-								<xsd:complexType>
-									<xsd:sequence>
-										<xsd:element name="category" type="xsd:string"/>
-										<xsd:element name="contact" type="xsd:string"/>
-									</xsd:sequence>
-								</xsd:complexType>
-							</xsd:element>
-							<xsd:element name="year" type="xsd:int"/>
-							<xsd:element name="duration" type="xsd:string"/>
-							<xsd:element name="position" type="xsd:string"/>
-					</xsd:sequence>
-					</xsd:complexType>
-				</xsd:element>
+                                <xsd:element name="language" type="xsd:string" maxOccurs="unbounded" />
+                                <xsd:element name="qualifications" type="xsd:string"/>
+                                <xsd:element name="jobType" type="xsd:string"/>
+                                <xsd:element name="desiredPosition" type="xsd:string"/>
+                                <xsd:element name="references" type="xsd:string"/>
+				<xsd:element name="motivation" type="xsd:string"/>
+                                   	
+                
+                <xsd:element name="empRecord" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:complexType>
+                                <xsd:sequence>
+                                        <xsd:element name="company"/>
+                                        <xsd:element name="category" type="xsd:string"/>
+                                        <xsd:element name="contact" type="xsd:string"/>          
+                                        <xsd:element name="year" type="xsd:int"/>
+                                        <xsd:element name="duration" type="xsd:string"/>
+                                        <xsd:element name="position" type="xsd:string"/>
+                                </xsd:sequence>
+                        </xsd:complexType>
+                </xsd:element>
+                
+                <xsd:element name="companyInfo">
+                        <xsd:complexType>
+                                <xsd:sequence>
+                                        <xsd:element name="name" type="xsd:string"/>
+                                        <xsd:element name="category" type="xsd:string"/>
+                                        <xsd:element name="founders" type="xsd:string"/>
+                                        <xsd:element name="ceo" type="xsd:string"/>
+                                        <xsd:element name="location" type="xsd:string"/>
+                                        <xsd:element name="contact" type="xsd:string"/>
+                                </xsd:sequence>
+                        </xsd:complexType>
+                </xsd:element>
 				
             </xsd:sequence>
         </xsd:complexType>
