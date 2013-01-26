@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-targetNamespace="http://namespace.profile.com/transcript"
-elementFormDefault ="qualifed">
+<xsd:schema xmlns="http://namespace.profile.com/transcript/t"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://namespace.profile.com/transcript/t">
     <xsd:element name="transcript">
-        <xsd:complexType name="transcriptType">
+        <xsd:complexType>
             <xsd:sequence>
                 <xsd:element name="name" type="xsd:string"/>
 				<xsd:group name="transcriptInfo">

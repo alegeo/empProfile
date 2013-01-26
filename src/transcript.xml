@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<transcript
-    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
-    xsi:noNamespaceSchemaLocation='transcript.xsd'>
+<transcript xmlns="http://namespace.profile.com/transcript/t">
     <name>Alexandra Georgoudaki</name>
     <university>KTH</university>
     <program>Master Software Engineering of Distributed Systems</program>

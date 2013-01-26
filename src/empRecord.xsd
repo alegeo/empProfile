@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-targetNamespace="http://namespace.profile.com/empRecord"
-elementFormDefault ="qualifed">
+<xsd:schema xmlns="http://namespace.profile.com/empRecord/e"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://namespace.profile.com/empRecord/e">
 <xsd:element name="empRecord">
-	<xsd:complexType name="empRecordType">
+	<xsd:complexType>
 		<xsd:sequence>
 			<xsd:element name="name" type="xsd:string"/>
 			<xsd:element name="company" type="xsd:string"/>

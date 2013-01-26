@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-targetNamespace="http://namespace.profile.com/cv"
-elementFormDefault ="qualifed">
+<xsd:schema xmlns="http://namespace.profile.com/cv/cv"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://namespace.profile.com/cv/cv">
     <xsd:element name="cv">
-        <xsd:complexType name="cvType">
+        <xsd:complexType>
             <xsd:sequence>
                 <xsd:element name="name" type="xsd:string"/>
                 <xsd:element name="address" type="xsd:string"/>
@@ -17,5 +17,6 @@ elementFormDefault ="qualifed">
                 <xsd:element name="references" type="xsd:string"/>
                 <xsd:element name="motivation" type="xsd:string"/>   
             </xsd:sequence>
-        </xsd:complexType>              
+        </xsd:complexType>  
+    </xsd:element>           
 </xsd:schema>

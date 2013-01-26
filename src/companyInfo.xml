@@ -2,6 +2,7 @@
 <companyInfo    
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="companyInfo.xsd">
+    
 	<company>
 		<name lang="en">Nokia</name>
 		<category>Telecommunications</category>

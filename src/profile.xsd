@@ -5,8 +5,7 @@
 	xmlns:cv="http://namespace.profile.com/cv"
 	xmlns:com="http://namespace.profile.com/companyInfo"
 	xmlns:t="http://namespace.profile.com/transcript"
-	elementFormDefault ="qualifed"
->
+	>
 <xsd:import schemaLocation="empRecord.xsd"
 namespace="http://namespace.profile.com/empRecord" />
 <xsd:import schemaLocation="cv.xsd"

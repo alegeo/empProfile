@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<empRecord
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="empRecord.xsd">
+<empRecord xmlns="http://namespace.profile.com/empProfile/e">
     <name>Alexandra Georgoudaki</name>
     <company>Google Inc.</company>
     <duration>18 months</duration>
