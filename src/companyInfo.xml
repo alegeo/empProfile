@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<company_info    
+<companyInfo    
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="company_info.xsd">
+    xsi:noNamespaceSchemaLocation="companyInfo.xsd">
 	<company>
 		<name lang="en">Nokia</name>
 		<category>Telecommunications</category>
@@ -18,7 +18,7 @@
 		<founders>Larry Ellison, Bob Miner, Ed Oates</founders>
 		<ceo>Larry Ellison </ceo>
 		<location>500 Oracle Parkway, Redwood Shores, Redwood City, California, United States</location>
-		<employees>30,500</employees>
+		<employees></employees>
 		<contact>1-800-633-0738</contact>
 	</company>
 	
@@ -41,4 +41,4 @@
 		<employees>4,331 </employees>
 		<contact>press@fb.com</contact>
 	</company>
-</company_info>
+</companyInfo>
