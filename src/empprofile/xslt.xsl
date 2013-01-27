@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
                   xmlns:apcv='http://namespace.profile.com/ns/cv'
+                  xmlns:t='http://namespace.profile.com/ns/transcript'
                   xmlns:e="http://namespace.profile.com/empRecord/e">
 <xsl:output method="xml" />
 <xsl:variable name="empRecord" select="document('empRecord.xml')"/>
 <xsl:variable name="companyInfo" select="document('companyInfo.xml')/companyInfo"/>
 <xsl:variable name="transcript" select="document('transcript.xml')/transcript"/> 
+
     <xsl:template match="apcv:cv" > 
             <profile>
                 <cv_info>
@@ -29,16 +31,19 @@
                 <references><xsl:value-of select="apcv:references" /> </references>
                 <motivation><xsl:value-of select="apcv:motivation" /> </motivation>
                 </cv_info>
+                <cry/>
                 
-                <xsl:value-of select="$empRecord"/>
-                <xsl:value-of select="$empRecord/workedAt"/>
-                <xsl:value-of select="$empRecord/e:workedAt"/>
+                <xsl:value-of select="$empRecord/e:empRecord/e:companyWorked"/> <abc/>
+                <xsl:value-of select="$empRecord/empRecord/e:companyWorked"/> <abc/>
+                <xsl:value-of select="$empRecord/e:companyWorked" /> <def/>
+                <xsl:value-of select="$empRecord/companyWorked" /> <def/>
+                <xsl:value-of select="$empRecord"/> <abc/>
                 
                 <xsl:variable name="companyWorked" select="$empRecord/e:company"/>
                 <xsl:for-each select="$empRecord">
                 <empRecord>  
-                    <company><xsl:value-of select="$empRecord/e:workedAt"/></company>
-                    <duration><xsl:value-of select="$empRecord/e:druration"/></duration>
+                    <company><xsl:value-of select="$empRecord/e:companyWorked/e:workedAt"/></company>
+                    <duration><xsl:value-of select="$empRecord/companyWorked/duration"/></duration>
                     <year><xsl:value-of select="$empRecord/e:year"/></year>
                     <position><xsl:value-of select="$empRecord/e:position"/></position>
                 </empRecord>
