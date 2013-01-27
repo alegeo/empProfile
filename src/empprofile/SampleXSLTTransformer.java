@@ -13,9 +13,9 @@ public class SampleXSLTTransformer {
 		try {
 			TransformerFactory  tFactory =  TransformerFactory.newInstance();
    	
-			Source xslSource = new StreamSource( "src/xslt.xsl" );
+			Source xslSource = new StreamSource( "src/empprofile/xslt.xsl" );
 			Transformer transformer = tFactory.newTransformer( xslSource );
-			transformer.transform( new StreamSource( "src/cv.xml" ),new StreamResult( new FileOutputStream( "test_output.xml" )));
+			transformer.transform( new StreamSource( "src/empprofile/cv.xml" ),new StreamResult( new FileOutputStream( "test_output.xml" )));
 
 		}catch(Exception ex) {
 			 ex.printStackTrace();
