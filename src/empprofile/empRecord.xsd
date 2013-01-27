@@ -11,7 +11,7 @@ targetNamespace="http://namespace.profile.com/empRecord/e">
 			<xsd:element name="year" type="xsd:int"/>
 			<xsd:element name="position" type="xsd:string"/>                       
 		</xsd:sequence>
-                <xsd:attribute name="id" type="xsd:string">
+                <xsd:attribute name="id" type="xsd:string"/>
 	</xsd:complexType>
 </xsd:element>              
 </xsd:schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<ns1:companyInfo
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns:ns1='http://namespace.profile.com/companyInfo/com'
+    xsi:schemaLocation='http://namespace.profile.com/companyInfo/com src/empprofile/companyInfo.xsd'>
+    <company>
+        <companyName></companyName>
+        <category></category>
+        <founders></founders>
+        <ceo></ceo>
+        <location></location>
+        <contact></contact>
+    </company>
+
+</ns1:companyInfo>

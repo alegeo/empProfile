@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<acv:cv xmlns="http://namespace.profile.com/ns/cv"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema"
-        xsi:schemaLocation="http://namespace.profile.com/ns/cv cv.xsd">
-    
+<acv:cv 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:acv="http://namespace.profile.com/ns/cv"
+    xsi:schemaLocation="http://namespace.profile.com/ns/cv src/empprofile/cv.xsd">
+       
         <acv:name>Alexandra Georgoudaki</acv:name>
 	<acv:address>Kungshamra 55B, Sonla, 17070, Sweden</acv:address>
 	<acv:telephone>0737217170</acv:telephone>
 	<acv:email>alegeo@kth.se</acv:email>
 	<acv:education>Master Software Engineering of Distributed Systems</acv:education>
 	<acv:language>English</acv:language>
+        <acv:language>Swedish</acv:language>
         <acv:qualifications>Driving license (car)</acv:qualifications>
         <acv:jobType>>Permanent</acv:jobType>   <!-- permanent, part time, contract -->
         <acv:desiredPosition>Software Developer, Web developer, Web designer</acv:desiredPosition>

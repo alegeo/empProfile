@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:cv
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns:ns1='http://namespace.profile.com/ns/cv'
+    xsi:schemaLocation='http://namespace.profile.com/ns/cv cv.xsd'>
+    <ns1:name>a</ns1:name>
+    <ns1:address>a</ns1:address>
+    <ns1:telephone>12313</ns1:telephone>
+    <ns1:email>a</ns1:email>
+    <ns1:education>a</ns1:education>
+    <ns1:language>a</ns1:language>
+    <ns1:language>a</ns1:language>
+
+    <ns1:qualifications>a</ns1:qualifications>
+    <ns1:jobType>a</ns1:jobType>
+    <ns1:desiredPosition>a</ns1:desiredPosition>
+    <ns1:references>a</ns1:references>
+    <ns1:motivation>a</ns1:motivation>
+
+</ns1:cv>
