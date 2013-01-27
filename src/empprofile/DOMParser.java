@@ -3,7 +3,6 @@ package empprofile;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -13,7 +12,6 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.TransformerFactoryConfigurationError;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-//import org.w3c.dom.Attr;
 import org.w3c.dom.DOMException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -25,239 +23,256 @@ public class DOMParser {
     
     public DOMParser() {
     }
-	
-    public static void main(String[] args) {
-            try {
+    
+    public static void main(String[] args){
+     
+        DOMParser d = new DOMParser();
+        d.generateProfile();
+      }
 
-            DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+    public void generateProfile(){
+ 
+        try {
+            DocumentBuilderFactory dFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dFactory.newDocumentBuilder();
             
             // to make the parser a validating parse
-            docFactory.setValidating(true);
+            dFactory.setValidating(true);
             //To parse a XML document with a namespace,
-            docFactory.setNamespaceAware(true);
+            dFactory.setNamespaceAware(true);
             
             // to ignore cosmetic whitespace between elements.
-            docFactory.setIgnoringElementContentWhitespace(true);
-            docFactory.setAttribute("http://java.sun.com/xml/jaxp/properties/schemaLanguage", "http://www.w3.org/2001/XMLSchema");
-            docFactory.setAttribute("http://java.sun.com/xml/jaxp/properties/schemaSource", "profile.xsd");
+            dFactory.setIgnoringElementContentWhitespace(true);
+            dFactory.setAttribute("http://java.sun.com/xml/jaxp/properties/schemaLanguage", "http://www.w3.org/2001/XMLSchema");
+            dFactory.setAttribute("http://java.sun.com/xml/jaxp/properties/schemaSource", "profile.xsd");           
             
+            Document proDoc = dBuilder.newDocument();
             
-            // root element
-            Document proDoc = docBuilder.newDocument();
-            
-            Document cvDoc = createNormalizedDocument(data.get(0));
-            Document comDoc = createNormalizedDocument(data.get(1));
-            Document eDoc = createNormalizedDocument(data.get(2));
-            Document tDoc = createNormalizedDocument(data.get(3));
+            Document cvDoc = normalizeDocument("src/empprofile/cv.xml", "src/empprofile/cv.xsd");
+            Document comDoc = normalizeDocument("src/empprofile/companyInfo.xml", "src/empprofile/companyInfo.xsd");
+            Document eDoc = normalizeDocument("src/empprofile/empRecord.xml", "src/empprofile/empRecord.xsd");
+            Document tDoc = normalizeDocument("src/empprofile/transcript.xml", "src/empprofile/transcript.xsd");
             
             
             String namespace = "http://www.profile.com/ns/profile";          
             
-            Element personalInfo = proDoc.create
-            
-            
-            Element rootElement = proDoc.createElement("profile");
+                       
+            // root element
+            Element rootElement = proDoc.createElementNS(namespace, "app:profile");
             proDoc.appendChild(rootElement);
+            
+            //cv_info elements
+            Element cv_info = proDoc.createElementNS(namespace, "app:cv_info");
+            rootElement.appendChild(cv_info);            
 
-            //cv elements
-            Element cv = proDoc.createElement("cv");
-            rootElement.appendChild(cv);
+                    //name elements
+                    Element name = proDoc.createElementNS(namespace, "app:name");
+                    NodeList cvName = cvDoc.getElementsByTagName("apcv:name");
+                    name.setTextContent(cvName.item(0).getTextContent());
+                    cv_info.appendChild(name);
 
-        //		// set attribute to staff element
-        //		Attr attr = proDoc.createAttribute("id");
-        //		attr.setValue("1");
-        //		staff.setAttributeNode(attr);
+                    // address elements
+                    Element address = proDoc.createElementNS(namespace, "app:address");
+                    NodeList cvAddress = cvDoc.getElementsByTagName("apcv:address");
+                    address.setTextContent(cvAddress.item(0).getTextContent());
+                    cv_info.appendChild(address);
 
-                        // shorten way
-                        // staff.setAttribute("id", "1");
+                    // telephone elements
+                    Element telephone = proDoc.createElementNS(namespace, "app:telephone");
+                    NodeList cvTelephone = cvDoc.getElementsByTagName("apcv:telephone");
+                    telephone.setTextContent(cvTelephone.item(0).getTextContent());
+                    cv_info.appendChild(telephone);
 
-                        //name elements
-                        Element name = proDoc.createElement("name");
-                        name.setTextContent("Alexandra Georgoudaki");
-                        cv.appendChild(name);
+                    // email elements
+                    Element email = proDoc.createElementNS(namespace, "app:email");
+                    NodeList cvEmail = cvDoc.getElementsByTagName("apcv:email");
+                    email.setTextContent(cvEmail.item(0).getTextContent());
+                    cv_info.appendChild(email);
 
-                        // address elements
-                        Element address = proDoc.createElement("address");
-                        address.setTextContent("Kungshamra 5");
-                        cv.appendChild(address);
+                    // education elements
+                    Element education = proDoc.createElementNS(namespace, "app:education");
+                    NodeList cvEducation = cvDoc.getElementsByTagName("apcv:email");
+                    education.setTextContent(cvEducation.item(0).getTextContent());
+                    cv_info.appendChild(education);
 
-                        // telephone elements
-                        Element telephone = proDoc.createElement("telephone");
-                        telephone.setTextContent("0737217170");
-                        cv.appendChild(telephone);
+                    // language elements
+                    Element language = proDoc.createElementNS(namespace, "app:language");
+                    NodeList cvLanguage = cvDoc.getElementsByTagName("apcv:language");
+                    language.setTextContent(cvLanguage.item(0).getTextContent());
+                    cv_info.appendChild(language);
 
-                        // email elements
-                        Element email = proDoc.createElement("email");
-                        email.setTextContent("alegeo@kth.se");
-                        cv.appendChild(email);
+                    // qualifications elements
+                    Element qualifications = proDoc.createElementNS(namespace, "app:qualifications");
+                    NodeList cvQualifications = cvDoc.getElementsByTagName("apcv:qualifications");
+                    qualifications.setTextContent(cvQualifications.item(0).getTextContent());
+                    cv_info.appendChild(qualifications);
 
-                        // education elements
-                        Element education = proDoc.createElement("education");
-                        education.setTextContent("Bachelor Degree in Information "
-                                + "Technology and Telecommunications, 2011");
-                        cv.appendChild(education);
+                    // jobType elements
+                    Element jobType = proDoc.createElementNS(namespace, "app:jobType");
+                    NodeList cvJobType = cvDoc.getElementsByTagName("apcv:jobType");
+                    jobType.setTextContent(cvJobType.item(0).getTextContent());
+                    cv_info.appendChild(jobType);
 
-                        // language elements
-                        Element language = proDoc.createElement("language");
-                        language.setTextContent("English, Swedish");
-                        cv.appendChild(language);
+                    // desiredPosition elements
+                    Element desiredPosition = proDoc.createElementNS(namespace, "app:desiredPosition");
+                    NodeList cvDesiredPosition = cvDoc.getElementsByTagName("apcv:desiredPosition");
+                    desiredPosition.setTextContent(cvDesiredPosition.item(0).getTextContent());
+                    cv_info.appendChild(desiredPosition);
 
-                        // qualifications elements
-                        Element qualifications = proDoc.createElement("qualifications");
-                        qualifications.setTextContent("Driving license (car)");
-                        cv.appendChild(qualifications);
+                    // references elements
+                    Element references = proDoc.createElementNS(namespace, "app:references");
+                    NodeList cvReferences = cvDoc.getElementsByTagName("apcv:references");
+                    references.setTextContent(cvReferences.item(0).getTextContent());
+                    cv_info.appendChild(references);
 
-                        // jobType elements
-                        Element jobType = proDoc.createElement("jobType");
-                        jobType.setTextContent("Permanent");
-                        cv.appendChild(jobType);
-
-                        // desiredPosition elements
-                        Element desiredPosition = proDoc.createElement("desiredPosition");
-                        desiredPosition.setTextContent("Software Developer, Web developer, Web designer");
-                        cv.appendChild(desiredPosition);
-
-                        // references elements
-                        Element references = proDoc.createElement("references");
-                        references.setTextContent("Available upon request");
-                        cv.appendChild(references);
-
-                        // motivation elements
-                        Element motivation = proDoc.createElement("motivation");
-                        motivation.setTextContent("I am suitable for the position because I enjoy the process of solving problems...");
-                        cv.appendChild(motivation);
-
-
-
-            //empRecord elements
-            Element empRecord = proDoc.createElement("empRecord");
-            rootElement.appendChild(empRecord);
-
-
-                        //empName elements
-                        Element empName = proDoc.createElement("empName");
-                        empName.setTextContent("Alexandra Georgoudaki");
-                        empRecord.appendChild(name);
-
-                        // workedAt elements
-                        Element workedAt = proDoc.createElement("workedAt");
-                        workedAt.setTextContent("Google Inc.");
-                        empRecord.appendChild(workedAt);
-
-                        // duration elements
-                        Element duration = proDoc.createElement("duration");
-                        duration.setTextContent("18 months");
-                        empRecord.appendChild(duration);
-
-                        // year elements
-                        Element year = proDoc.createElement("year");
-                        year.setTextContent("2011");
-                        empRecord.appendChild(year);
-
-                        // position elements
-                        Element position = proDoc.createElement("position");
-                        position.setTextContent("Software Developer");
-                        empRecord.appendChild(position);
-
-           //companyInfo elements
-            Element companyInfo = proDoc.createElement("companyInfo");
-            rootElement.appendChild(companyInfo);
-
-                //company elements
-                Element company = proDoc.createElement("company");
-                empRecord.appendChild(company);
-
-
-                        //empName elements
-                        Element companyName = proDoc.createElement("companyName");
-                        companyName.setTextContent("Google Inc.");
-                        empRecord.appendChild(companyName);
-
-                        // category elements
-                        Element category = proDoc.createElement("category");
-                        category.setTextContent("Internet, Computer software");
-                        empRecord.appendChild(category);
-
-                        // founders elements
-                        Element founders = proDoc.createElement("founders");
-                        founders.setTextContent("Larry Page, Sergey Brin");
-                        empRecord.appendChild(founders);
-
-                        // ceo elements
-                        Element ceo = proDoc.createElement("ceo");
-                        ceo.setTextContent("Larry Page");
-                        empRecord.appendChild(ceo);
-
-                        // location elements
-                        Element location = proDoc.createElement("location");
-                        location.setTextContent("Googleplex, Mountain View, California, United States");
-                        empRecord.appendChild(location);    
-
-                        // contact elements
-                        Element contact = proDoc.createElement("contact");
-                        contact.setTextContent("1-801-456-2435");
-                        empRecord.appendChild(contact);  
-
-            //transcript elements
-            Element transcript = proDoc.createElement("transcript");
-            rootElement.appendChild(transcript);
-
-
-                        //studentName elements
-                        Element studentName = proDoc.createElement("studentName");
-                        studentName.setTextContent("Alexandra Georgoudaki");
-                        transcript.appendChild(studentName);
-
-                        // university elements
-                        Element university = proDoc.createElement("university");
-                        university.setTextContent("KTH");
-                        transcript.appendChild(university);
-
-                        // program elements
-                        Element program = proDoc.createElement("program");
-                        program.setTextContent("Master Software Engineering of Distributed Systems");
-                        transcript.appendChild(program);
-
-                        // issueDate elements
-                        Element issueDate = proDoc.createElement("issueDate");
-                        issueDate.setTextContent("2011");
-                        transcript.appendChild(issueDate);
-
-                        // courses elements
-                        Element courses = proDoc.createElement("courses");
-                        transcript.appendChild(courses);
-
-                        // course elements
-                        Element course = proDoc.createElement("course");
-                        transcript.appendChild(course);
-
-                        // code elements
-                        Element code = proDoc.createElement("code");
-                        code.setTextContent("IK2210");
-                        transcript.appendChild(code);
-
-                        // title elements
-                        Element title = proDoc.createElement("title");
-                        title.setTextContent("Distributed Systems, Basic Course");
-                        transcript.appendChild(title);
-
-                        // credits elements
-                        Element credits = proDoc.createElement("credits");
-                        credits.setTextContent("7.5");
-                        transcript.appendChild(credits);
-
-                        // grade elements
-                        Element grade = proDoc.createElement("grade");
-                        grade.setTextContent("A");
-                        transcript.appendChild(grade);
+                    // motivation elements
+                    Element motivation = proDoc.createElementNS(namespace, "app:motivation");
+                    NodeList cvMotivation = cvDoc.getElementsByTagName("apcv:motivation");
+                    motivation.setTextContent(cvMotivation.item(0).getTextContent());
+                    cv_info.appendChild(motivation);
 
 
 
+        //empRecord elements
+        Element empRecord = proDoc.createElementNS(namespace, "app:empRecord");
+        rootElement.appendChild(empRecord);
+            
+                    //empName elements
+                    Element empName = proDoc.createElementNS(namespace, "app:empName");
+                    NodeList eEmpName= eDoc.getElementsByTagName("e:empName");
+                    empName.setTextContent(eEmpName.item(0).getTextContent());
+                    empRecord.appendChild(empName);
+
+                    // workedAt elements
+                    Element workedAt = proDoc.createElementNS(namespace, "app:workedAt");
+                    NodeList eWorkedAt= eDoc.getElementsByTagName("e:workedAt");
+                    workedAt.setTextContent(eWorkedAt.item(0).getTextContent());
+                    empRecord.appendChild(workedAt);
+
+                    // duration elements
+                    Element duration = proDoc.createElementNS(namespace, "app:duration");
+                    NodeList eDuration= eDoc.getElementsByTagName("e:duration");
+                    duration.setTextContent(eDuration.item(0).getTextContent());
+                    empRecord.appendChild(duration);
+
+                    // year elements
+                    Element year = proDoc.createElementNS(namespace, "app:year");
+                    NodeList eYear= eDoc.getElementsByTagName("e:year");
+                    year.setTextContent(eYear.item(0).getTextContent());
+                    empRecord.appendChild(year);
+
+                    // position elements
+                    Element position = proDoc.createElementNS(namespace, "app:position");
+                    NodeList ePosition= eDoc.getElementsByTagName("e:position");
+                    position.setTextContent(ePosition.item(0).getTextContent());
+                    empRecord.appendChild(position);
+
+       //companyInfo elements
+        Element companyInfo = proDoc.createElementNS(namespace, "app:companyInfo");
+        rootElement.appendChild(companyInfo);
+
+            //company elements
+            Element company = proDoc.createElementNS(namespace, "app:company");
+            companyInfo.appendChild(company);
 
 
+                    //companyName elements
+                    Element companyName = proDoc.createElementNS(namespace, "app:companyName");
+                    NodeList comCompanyName= comDoc.getElementsByTagName("com:companyName");
+                    companyName.setTextContent(comCompanyName.item(0).getTextContent());
+                    companyInfo.appendChild(companyName);
+
+                    // category elements
+                    Element category = proDoc.createElementNS(namespace, "app:category");
+                    NodeList comCategory= comDoc.getElementsByTagName("com:category");
+                    category.setTextContent(comCategory.item(0).getTextContent());
+                    companyInfo.appendChild(category);
+
+                    // founders elements
+                    Element founders = proDoc.createElementNS(namespace, "app:founders");
+                    NodeList comFounders= comDoc.getElementsByTagName("com:founders");
+                    founders.setTextContent(comFounders.item(0).getTextContent());
+                    companyInfo.appendChild(founders);
+
+                    // ceo elements
+                    Element ceo = proDoc.createElementNS(namespace, "app:ceo");
+                    NodeList comCeo= comDoc.getElementsByTagName("com:ceo");
+                    ceo.setTextContent(comCeo.item(0).getTextContent());
+                    companyInfo.appendChild(ceo);
+
+                    // location elements
+                    Element location = proDoc.createElementNS(namespace, "app:location");
+                    NodeList comLocation= comDoc.getElementsByTagName("com:location");
+                    location.setTextContent(comLocation.item(0).getTextContent());
+                    companyInfo.appendChild(location);    
+
+                    // contact elements
+                    Element contact = proDoc.createElementNS(namespace, "app:contact");
+                    NodeList comContact= comDoc.getElementsByTagName("com:contact");
+                    contact.setTextContent(comContact.item(0).getTextContent());
+                    companyInfo.appendChild(contact);  
+
+        //transcript elements
+        Element transcript = proDoc.createElementNS(namespace, "app:transcript");
+        rootElement.appendChild(transcript);
 
 
+                    //studentName elements
+                    Element studentName = proDoc.createElementNS(namespace, "app:studentName");
+                    NodeList tStudentName= tDoc.getElementsByTagName("t:studentName");
+                    studentName.setTextContent(tStudentName.item(0).getTextContent());
+                    transcript.appendChild(studentName);
+
+                    // university elements
+                    Element university = proDoc.createElementNS(namespace, "app:university");
+                    NodeList tUniversity= tDoc.getElementsByTagName("t:university");
+                    university.setTextContent(tUniversity.item(0).getTextContent());
+                    university.setTextContent("KTH");
+                    transcript.appendChild(university);
+
+                    // program elements
+                    Element program = proDoc.createElementNS(namespace, "app:program");
+                    NodeList tProgram= tDoc.getElementsByTagName("t:program");
+                    program.setTextContent(tProgram.item(0).getTextContent());
+                    transcript.appendChild(program);
+
+                    // issueDate elements
+                    Element issueDate = proDoc.createElementNS(namespace, "app:issueDate");
+                    NodeList tIssueDate= tDoc.getElementsByTagName("t:issueDate");
+                    issueDate.setTextContent(tIssueDate.item(0).getTextContent());
+                    transcript.appendChild(issueDate);
+
+                    // courses elements
+                    Element courses = proDoc.createElementNS(namespace, "app:courses");
+                    transcript.appendChild(courses);
+
+                    // course elements
+                    Element course = proDoc.createElementNS(namespace, "app:course");
+                    transcript.appendChild(course);
+
+                    // code elements
+                    Element code = proDoc.createElementNS(namespace, "app:code");
+                    NodeList tCode= tDoc.getElementsByTagName("t:code");
+                    code.setTextContent(tCode.item(0).getTextContent());
+                    transcript.appendChild(code);
+
+                    // title elements
+                    Element title = proDoc.createElementNS(namespace, "app:title");
+                    NodeList tTitle= tDoc.getElementsByTagName("t:title");
+                    title.setTextContent(tTitle.item(0).getTextContent());
+                    transcript.appendChild(title);
+
+                    // credits elements
+                    Element credits = proDoc.createElementNS(namespace, "app:credits");
+                    NodeList tCredits= tDoc.getElementsByTagName("t:credits");
+                    credits.setTextContent(tCredits.item(0).getTextContent());
+                    transcript.appendChild(credits);
+
+                    // grade elements
+                    Element grade = proDoc.createElementNS(namespace, "app:grade");
+                    NodeList tGrade= tDoc.getElementsByTagName("t:grade");
+                    grade.setTextContent(tGrade.item(0).getTextContent());
+                    transcript.appendChild(grade);
 
             // write the content into xml file
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
@@ -280,6 +295,30 @@ public class DOMParser {
       }catch (TransformerFactoryConfigurationError tfce) {
             System.err.println("[ERROR] 4");
       }
+    }
+    
+
+    
+    private Document normalizeDocument(String xml, String xsd) {
+        Document xmlDocument = null;
+        
+        try {
+            DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
+            docBuilderFactory.setValidating(true);
+            docBuilderFactory.setNamespaceAware(true);
+            docBuilderFactory.setIgnoringElementContentWhitespace(true);
+            docBuilderFactory.setAttribute("http://java.sun.com/xml/jaxp/properties/schemaLanguage", "http://www.w3.org/2001/XMLSchema");
+            docBuilderFactory.setAttribute("http://java.sun.com/xml/jaxp/properties/schemaSource", xsd);
+
+            DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
+            xmlDocument = docBuilder.parse(new File(xml));
+            xmlDocument.getDocumentElement().normalize();
+        }
+        catch(IllegalArgumentException | ParserConfigurationException | SAXException | IOException ex) {
+            System.err.println("[ERROR] Something is wrong!");
+        }
+        
+        return xmlDocument;
     }
 }
 
