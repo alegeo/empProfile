@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<companyInfo xmlns:com="http://namespace.profile.com/companyInfo">    
+<companyInfo xmlns:com="http://namespace.profile.com/companyInfo">   
 	<com:company>
 		<com:companyName>Nokia</com:companyName>
 		<com:category>Telecommunications</com:category>
