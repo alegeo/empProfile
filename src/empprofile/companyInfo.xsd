@@ -3,6 +3,7 @@
 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 targetNamespace="http://namespace.profile.com/companyInfo/com">
     <xsd:element name="companyInfo">
+        <xsd:complexType>
         <xsd:element name="company">
         <xsd:complexType>
             <xsd:sequence>
@@ -15,5 +16,6 @@ targetNamespace="http://namespace.profile.com/companyInfo/com">
             </xsd:sequence>
         </xsd:complexType>
         </xsd:element>
+        </xsd:complexType>
     </xsd:element>              
 </xsd:schema>
