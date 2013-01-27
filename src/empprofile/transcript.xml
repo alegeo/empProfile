@@ -1,34 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<transcript xmlns="http://namespace.profile.com/transcript/t">
-    <studentName>Alexandra Georgoudaki</studentName>
-    <university>KTH</university>
-    <program>Masters Software Engineering of Distributed Systems</program>
-    <issueDate>2012-12-23</issueDate>
-    <courses>
-        <course>
-            <code>IK2210</code>
-            <title>Distributed Systems, Basic Course</title>          
-            <credits>7.5</credits>
-            <grade>A</grade>
-        </course>
-        <course>
-            <code>IB2210</code>
-            <title>Modern Methods in Software Engineering</title>
-            <credits>7.5</credits>
-            <grade>A</grade>
-        </course>
-        <course>
-            <code>IB2210</code>
-            <title>Distributed Artificial Intelligence and Intelligent Agents</title>
-            <credits>7.5</credits>
-            <grade>A</grade>
-        </course>
-        <course>
-            <code>ID1234</code>
-            <title>Network Programming in Java</title>
-            <credits>6</credits>
-            <grade>B</grade>
-        </course>
-    </courses>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
 
-</transcript>
+
+<t:transcript
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns:t='http://namespace.profile.com/ns/transcript'
+    xsi:schemaLocation='http://namespace.profile.com/ns/transcript transcript.xsd'>
+    <t:studentName>Annabelle White</t:studentName>
+    <t:university>KTH</t:university>
+    <t:program>Masters Software Engineering of Distributed Systems</t:program>
+    <t:issueDate>2012-12-23</t:issueDate>
+    <t:courses>
+        <t:course>
+            <t:code>IK2210</t:code>
+            <t:title>Distributed Systems, Basic Course</t:title>
+            <t:credits>7.5</t:credits>
+            <t:grade>A</t:grade>
+        </t:course>
+        <t:course>
+            <t:code>IB2210</t:code>
+            <t:title>Modern Methods in Software Engineering</t:title>
+            <t:credits>7.5</t:credits>
+            <t:grade>B</t:grade>
+        </t:course>
+        <t:course>
+            <t:code>IB2210</t:code>
+            <t:title>Distributed Artificial Intelligence and Intelligent Agents</t:title>
+            <t:credits>7.5</t:credits>
+            <t:grade>A</t:grade>
+        </t:course>
+        <t:course>
+            <t:code>ID1234</t:code>
+            <t:title>Network Programming in Java</t:title>
+            <t:credits>6</t:credits>
+            <t:grade>B</t:grade>
+        </t:course>
+    </t:courses>
+
+</t:transcript>
