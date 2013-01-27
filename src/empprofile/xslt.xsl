@@ -1,43 +1,46 @@
 <?xml version="1.0"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
+                  xmlns:apcv='http://namespace.profile.com/ns/cv'
+                  xmlns:e="http://namespace.profile.com/empRecord/e">
 <xsl:output method="xml" />
-<xsl:variable name="empRecord" select="document('empRecord.xml')/empRecord"/>
+<xsl:variable name="empRecord" select="document('empRecord.xml')"/>
 <xsl:variable name="companyInfo" select="document('companyInfo.xml')/companyInfo"/>
 <xsl:variable name="transcript" select="document('transcript.xml')/transcript"/> 
-    <xsl:template match="/" > 
+    <xsl:template match="apcv:cv" > 
             <profile>
                 <cv_info>
-                <name><xsl:apply-templates select="apcv:cv/name" /> </name>
-                <address><xsl:apply-templates select="apcv:cv/address" /> </address>
-                <telephone><xsl:value-of select="apcv:cv/telephone" /> </telephone>
-                <email><xsl:value-of select="apcv:cv/email" /></email>
+                <name><xsl:value-of select="apcv:name" /> </name>
+                <address><xsl:value-of select="apcv:address" /> </address>
+                <telephone><xsl:value-of select="apcv:telephone" /> </telephone>
+                <email><xsl:value-of select="apcv:email" /></email>
                     <education>
-                    <xsl:key name="kGrade" match="credits" use="../grade"/>
                     <univeirsity><xsl:value-of select="$transcript/univeirsity"/></univeirsity>
                     <program><xsl:value-of select="$transcript/program"/></program><GPA> 
                     <!-- <xsl:value-of select=" (4*(sum($transcript/courses/course[grade='A']/credits)) + 3*(sum($transcript/courses/course[grade='B']/credits)) + 2*(sum($transcript/courses/course[grade='C']/credits)) + 1*(sum($transcript/courses/course[grade='D']/credits))) div (sum($transcript/courses/course/credits))"/>  -->
                     <xsl:value-of select="format-number( (4*(sum($transcript/courses/course[grade='A']/credits)) + 3*(sum($transcript/courses/course[grade='B']/credits)) + 2*(sum($transcript/courses/course[grade='C']/credits)) + 1*(sum($transcript/courses/course[grade='D']/credits))) div (sum($transcript/courses/course/credits)), '#.000')"/>
                     </GPA> 
                     </education>
-                <xsl:for-each select="cv/language"> 
+                <xsl:for-each select="apcv:language"> 
                         <language> <xsl:value-of select="." /></language>
                 </xsl:for-each>
-                <qualifications><xsl:value-of select="cv/qualifications" /></qualifications>
-                <jobType><xsl:value-of select="cv/jobType" /></jobType>
-                <desiredPosition><xsl:value-of select="cv/desiredPosition" /></desiredPosition>
-                <references><xsl:value-of select="cv/references" /> </references>
-                <motivation><xsl:value-of select="cv/motivation" /> </motivation>
+                <qualifications><xsl:value-of select="apcv:qualifications" /></qualifications>
+                <jobType><xsl:value-of select="apcv:jobType" /></jobType>
+                <desiredPosition><xsl:value-of select="apcv:desiredPosition" /></desiredPosition>
+                <references><xsl:value-of select="apcv:references" /> </references>
+                <motivation><xsl:value-of select="apcv:motivation" /> </motivation>
                 </cv_info>
                 
-                <xsl:variable name="companyWorked" select="$empRecord/company"/>
+                <xsl:value-of select="$empRecord"/>
+                <xsl:value-of select="$empRecord/workedAt"/>
+                <xsl:value-of select="$empRecord/e:workedAt"/>
+                
+                <xsl:variable name="companyWorked" select="$empRecord/e:company"/>
                 <xsl:for-each select="$empRecord">
                 <empRecord>  
-                    <company><xsl:value-of select="$empRecord/company"/></company>
-                    <category/>
-                    <contact><xsl:value-of select="$empRecord/contact"/></contact>
-                    <year><xsl:value-of select="$empRecord/year"/></year>
-                    <duration><xsl:value-of select="$empRecord/duration"/></duration>
-                    <position><xsl:value-of select="$empRecord/position"/></position>
+                    <company><xsl:value-of select="$empRecord/e:workedAt"/></company>
+                    <duration><xsl:value-of select="$empRecord/e:druration"/></duration>
+                    <year><xsl:value-of select="$empRecord/e:year"/></year>
+                    <position><xsl:value-of select="$empRecord/e:position"/></position>
                 </empRecord>
                 </xsl:for-each>
 
@@ -56,7 +59,6 @@
                 </xsl:when>
                 <xsl:otherwise />
                 </xsl:choose>    
-                 
                  
         </profile>
     </xsl:template>
