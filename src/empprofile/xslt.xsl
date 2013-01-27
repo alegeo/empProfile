@@ -7,10 +7,10 @@
     <xsl:template match="/" > 
             <profile>
                 <cv_info>
-                <name><xsl:apply-templates select="cv/name" /> </name>
-                <address><xsl:apply-templates select="cv/address" /> </address>
-                <telephone><xsl:value-of select="cv/telephone" /> </telephone>
-                <email><xsl:value-of select="cv/email" /></email>
+                <name><xsl:apply-templates select="apcv:cv/name" /> </name>
+                <address><xsl:apply-templates select="apcv:cv/address" /> </address>
+                <telephone><xsl:value-of select="apcv:cv/telephone" /> </telephone>
+                <email><xsl:value-of select="apcv:cv/email" /></email>
                     <education>
                     <xsl:key name="kGrade" match="credits" use="../grade"/>
                     <univeirsity><xsl:value-of select="$transcript/univeirsity"/></univeirsity>
