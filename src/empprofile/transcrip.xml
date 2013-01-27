@@ -3,7 +3,7 @@
     xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
     xmlns:t='http://namespace.profile.com/ns/transcript'
     xsi:schemaLocation='http://namespace.profile.com/ns/transcript transcript.xsd'>
-    <t:studentName></t:studentName>
+    <t:studentName>s</t:studentName>
     <t:courses>
         <t:course>
             <t:code></t:code>

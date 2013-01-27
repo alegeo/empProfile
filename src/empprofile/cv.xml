@@ -3,7 +3,7 @@
     xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
     xmlns:apcv='http://namespace.profile.com/ns/cv'
     xsi:schemaLocation='http://namespace.profile.com/ns/cv cv.xsd'>
-    <apcv:name>Anna White</apcv:name>
+    <apcv:name>Annabelle White</apcv:name>
     <apcv:address>Kungshamra 5</apcv:address>
     <apcv:telephone>+34-123321-5312</apcv:telephone>
     <apcv:email>annaw@kth.se</apcv:email>
