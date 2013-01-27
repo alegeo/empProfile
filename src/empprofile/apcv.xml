@@ -3,18 +3,17 @@
     xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
     xmlns:ns1='http://namespace.profile.com/ns/cv'
     xsi:schemaLocation='http://namespace.profile.com/ns/cv cv.xsd'>
-    <ns1:name>a</ns1:name>
-    <ns1:address>a</ns1:address>
-    <ns1:telephone>12313</ns1:telephone>
-    <ns1:email>a</ns1:email>
-    <ns1:education>a</ns1:education>
-    <ns1:language>a</ns1:language>
-    <ns1:language>a</ns1:language>
-
-    <ns1:qualifications>a</ns1:qualifications>
-    <ns1:jobType>a</ns1:jobType>
-    <ns1:desiredPosition>a</ns1:desiredPosition>
-    <ns1:references>a</ns1:references>
-    <ns1:motivation>a</ns1:motivation>
+    <ns1:name>Anna White</ns1:name>
+    <ns1:address>Kungshamra 5</ns1:address>
+    <ns1:telephone>+34-123321-5312</ns1:telephone>
+    <ns1:email>annaw@kth.se</ns1:email>
+    <ns1:education>Master Software Engineering of Distributed Systems</ns1:education>
+    <ns1:language>English</ns1:language>
+    <ns1:language>Swedish</ns1:language>
+    <ns1:qualifications>Driving license (car)</ns1:qualifications>
+    <ns1:jobType>Permanent</ns1:jobType> <!-- permanent, part time, contract -->
+    <ns1:desiredPosition>Software Developer</ns1:desiredPosition>
+    <ns1:references>Available upon request</ns1:references>
+    <ns1:motivation>I am suitable for the position of a software developer because..</ns1:motivation>
 
 </ns1:cv>
