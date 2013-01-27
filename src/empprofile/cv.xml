@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<acv:cv 
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:acv="http://namespace.profile.com/ns/cv"
-    xsi:schemaLocation="http://namespace.profile.com/ns/cv src/empprofile/cv.xsd">
-       
-        <acv:name>Alexandra Georgoudaki</acv:name>
-	<acv:address>Kungshamra 55B, Sonla, 17070, Sweden</acv:address>
-	<acv:telephone>0737217170</acv:telephone>
-	<acv:email>alegeo@kth.se</acv:email>
-	<acv:education>Master Software Engineering of Distributed Systems</acv:education>
-	<acv:language>English</acv:language>
-        <acv:language>Swedish</acv:language>
-        <acv:qualifications>Driving license (car)</acv:qualifications>
-        <acv:jobType>>Permanent</acv:jobType>   <!-- permanent, part time, contract -->
-        <acv:desiredPosition>Software Developer, Web developer, Web designer</acv:desiredPosition>
-        <acv:references>Available upon request</acv:references>  
-        <acv:motivation>I am suitable for the position of a software developer because I enjoy 
-                    the process of solving problems.</acv:motivation>
-</acv:cv>
+<apcv:cv
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns:apcv='http://namespace.profile.com/ns/cv'
+    xsi:schemaLocation='http://namespace.profile.com/ns/cv cv.xsd'>
+    <apcv:name>Annabelle White</apcv:name>
+    <apcv:address>Kungshamra 5</apcv:address>
+    <apcv:telephone>+34-123321-5312</apcv:telephone>
+    <apcv:email>annaw@kth.se</apcv:email>
+    <apcv:education>Master Software Engineering of Distributed Systems</apcv:education>
+    <apcv:language>English</apcv:language>
+    <apcv:language>Swedish</apcv:language>
+    <apcv:qualifications>Driving license (car)</apcv:qualifications>
+    <apcv:jobType>Permanent</apcv:jobType> <!-- permanent, part time, contract -->
+    <apcv:desiredPosition>Software Developer</apcv:desiredPosition>
+    <apcv:references>Available upon request</apcv:references>
+    <apcv:motivation>I am suitable for the position of a software developer because</apcv:motivation>
+
+</apcv:cv>
