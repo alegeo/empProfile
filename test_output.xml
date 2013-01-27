@@ -1,1 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><profile><name>Alexandra Georgoudaki</name><telephone>Tel: 0737217170</telephone><email>alegeo@kth.se</email><desiredPosition/><language>English</language></profile>
+<?xml version="1.0" encoding="UTF-8"?><profile xmlns:apcv="http://namespace.profile.com/ns/cv" xmlns:e="http://namespace.profile.com/empRecord/e"><cv_info><name>Annabelle White</name><address>Kungshamra 5</address><telephone>+34-123321-5312</telephone><email>annaw@kth.se</email><education><univeirsity/><program/><GPA>NaN</GPA></education><language>English</language><language>Swedish</language><qualifications>Driving license (car)</qualifications><jobType>Permanent</jobType><desiredPosition>Software Developer</desiredPosition><references>Available upon request</references><motivation>I am suitable for the position of a software developer because</motivation></cv_info>
+    Annabelle White
+    Google
+    18 months
+    2011
+    Software Developer
+
+<empRecord><company/><duration/><year/><position/></empRecord></profile>
