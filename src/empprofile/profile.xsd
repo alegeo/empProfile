@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="http://namespace.profile.com/profile"
-	targetNamespace="http://namespace.profile.com/profile"
-        xmlns:xsd="http://www.w3.org/2001/XMLSchema"	
-        xmlns:e="http://namespace.profile.com/empRecord"
-	xmlns:cv="http://namespace.profile.com/cv"
-	xmlns:com="http://namespace.profile.com/companyInfo"
-	xmlns:t="http://namespace.profile.com/transcript"
+<xsd:schema 
+        xmlns:app="http://namespace.profile.com/ns/profile"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://namespace.profile.com/ns/profile"	
+        xmlns:e="http://namespace.profile.com/ns/empRecord"
+	xmlns:cv="http://namespace.profile.com/ns/cv"
+	xmlns:com="http://namespace.profile.com/ns/companyInfo"
+	xmlns:t="http://namespace.profile.com/ns/transcript"
 	>
 <xsd:import schemaLocation="empRecord.xsd"
-namespace="http://namespace.profile.com/empRecord/e" />
+namespace="http://namespace.profile.com/ns/empRecord" />
 <xsd:import schemaLocation="cv.xsd"
-namespace="http://namespace.profile.com/cv" />
+namespace="http://namespace.profile.com/ns/cv" />
 <xsd:import schemaLocation="companyInfo.xsd"
-namespace="http://namespace.profile.com/companyInfo/com" />
+namespace="http://namespace.profile.com/ns/com" />
 <xsd:import schemaLocation="transcript.xsd"
-namespace="http://namespace.profile.com/transcript/t" />
+namespace="http://namespace.profile.com/ns/transcript" />
 
     <xsd:element name="profile">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="cv_info" type="c:cvType"/>
+                <xsd:element name="cv_info" type="cv:cvType"/>
                                 <xsd:element name="name" type="xsd:string"/>
                                 <xsd:element name="address" type="xsd:string"/>
 				<xsd:element name="telephone" type="xsd:string" maxOccurs="unbounded"/>
