@@ -29,20 +29,18 @@ and open the template in the editor.
     <references>stdu</references>
     <motivation>stuw</motivation>
     </cv_info>
-    <empRecord>
-        <empName>twwww</empName>
+    <companyWorked>
         <workedAt>stwwhw</workedAt>
         <year>3245</year>
         <duration>stru</duration>
         <position>swtusw</position>
-    </empRecord>
-    <empRecord>
-        <empName>stuwe</empName>
+    </companyWorked>
+    <companyWorked>
         <workedAt>srtuwu</workedAt>
         <year>2454</year>
         <duration>45 tht</duration>
         <position>5ywew</position>
-    </empRecord>
+    </companyWorked>
     <companyInfo>
         <companyName>trhwrewh</companyName>
         <category>wthwh</category>
