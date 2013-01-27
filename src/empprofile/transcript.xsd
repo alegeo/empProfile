@@ -6,13 +6,9 @@ targetNamespace="http://namespace.profile.com/transcript/t">
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element name="studentName" type="xsd:string"/>
-				<xsd:group name="transcriptInfo">
-				<xsd:sequence>
-					<xsd:element name="university" type="xsd:string"/>
-					<xsd:element name="program" type="xsd:string"/>
-					<xsd:element name="issueDate" type="xsd:date"/>
-				</xsd:sequence>
-				</xsd:group>
+		<xsd:element name="university" type="xsd:string"/>
+                <xsd:element name="program" type="xsd:string"/>
+                <xsd:element name="issueDate" type="xsd:date"/>
                 <xsd:element name="courses">
                     <xsd:complexType>
                         <xsd:sequence>
