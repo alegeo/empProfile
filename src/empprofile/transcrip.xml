@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<t:transcript
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns:t='http://namespace.profile.com/ns/transcript'
+    xsi:schemaLocation='http://namespace.profile.com/ns/transcript transcript.xsd'>
+    <t:studentName></t:studentName>
+    <t:courses>
+        <t:course>
+            <t:code></t:code>
+            <t:title></t:title>
+            <t:credits></t:credits>
+            <t:grade></t:grade>
+        </t:course>
+        <t:course>
+            <t:code></t:code>
+            <t:title></t:title>
+            <t:credits></t:credits>
+            <t:grade></t:grade>
+        </t:course>
+        <t:course>
+            <t:code></t:code>
+            <t:title></t:title>
+            <t:credits></t:credits>
+            <t:grade></t:grade>
+        </t:course>
+        <t:course>
+            <t:code></t:code>
+            <t:title></t:title>
+            <t:credits></t:credits>
+            <t:grade></t:grade>
+        </t:course>
+    </t:courses>
+
+</t:transcript>

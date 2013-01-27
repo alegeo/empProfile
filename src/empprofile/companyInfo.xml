@@ -1,38 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com:companyInfo xmlns:com="http://namespace.profile.com/companyInfo">   
-	<com:company>
-		<com:companyName>Nokia</com:companyName>
-		<com:category>Telecommunications</com:category>
-		<com:founders>Fredrik Idestam, Leo Mechelin</com:founders>
-		<com:ceo>Stephen Elop</com:ceo>
-		<com:location>Espoo, Finland</com:location>
-		<com:contact>+358 7180 08000</com:contact>
-	</com:company>
+<com:companyInfo
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns:com='http://namespace.profile.com/ns/com'
+    xsi:schemaLocation='http://namespace.profile.com/ns/com companyInfo.xsd'>
+    <com:company>
+        <com:companyName>Nokia</com:companyName>
+        <com:category>Telecommunications</com:category>
+        <com:founders>Fredrik Idestam, Leo Mechelin</com:founders>
+        <com:ceo>Stephen Elop</com:ceo>
+        <com:location>Espoo, Finland</com:location>
+        <com:contact>56-806-836-1357</com:contact>
+    </com:company>
+    
+    <com:company>
+        <com:companyName>Oracle</com:companyName>
+        <com:category>Enterprise software, Computer hardware</com:category>
+        <com:founders>Larry Ellison, Bob Miner, Ed Oates</com:founders>
+        <com:ceo>Larry Ellison</com:ceo>
+        <com:location>500 Oracle Parkway, Redwood Shores, California, United States</com:location>
+        <com:contact>1-800-633-0738</com:contact>
+    </com:company>
+    
+    <com:company>
+        <com:companyName>Google</com:companyName>
+        <com:category>Internet, Computer software</com:category>
+        <com:founders>Larry Page, Sergey Brin</com:founders>
+        <com:ceo>Larry Page</com:ceo>
+        <com:location>Googleplex, Mountain View, California, United States</com:location>
+        <com:contact>1-801-456-2435</com:contact>
+    </com:company>
+    
+    <com:company>
+        <com:companyName>Facebook</com:companyName>
+        <com:category>Social networking services</com:category>
+        <com:founders>Mark Zuckerberg, Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, Chris Hughes</com:founders>
+        <com:ceo>Mark Zuckerberg</com:ceo>
+        <com:location>Menlo Park, California, United States</com:location>
+        <com:contact>4-903-434-2655</com:contact>
+    </com:company>
+    
+    
 
-	<com:company>
-		<com:companyName>Oracle</com:companyName>
-		<com:category>Enterprise software, Computer hardware</com:category>
-		<com:founders>Larry Ellison, Bob Miner, Ed Oates</com:founders>
-		<com:ceo>Larry Ellison </com:ceo>
-		<com:location>500 Oracle Parkway, Redwood Shores, Redwood City, California, United States</com:location>
-		<com:contact>1-800-633-0738</com:contact>
-	</com:company>
-	
-	<com:company>
-		<com:companyName>Google Inc.</com:companyName>
-		<com:category>Internet, Computer software</com:category>
-		<com:founders>Larry Page, Sergey Brin</com:founders>
-		<com:ceo>Larry Page</com:ceo>
-		<com:location>Googleplex, Mountain View, California, United States</com:location>
-		<com:contact>1-801-456-2435</com:contact>
-	</com:company>
-	
-	<com:company>
-		<com:companyName>Facebook, Inc.</com:companyName>
-		<com:category>Social networking services</com:category>
-		<com:founders>Mark Zuckerberg, Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, Chris Hughes</com:founders>
-		<com:ceo>Mark Zuckerberg</com:ceo>
-		<com:location>Menlo Park, California, United States</com:location>
-		<com:contact>press@fb.com</com:contact>
-	</com:company>
 </com:companyInfo>

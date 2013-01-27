@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="http://namespace.profile.com/transcript/t"
-xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-targetNamespace="http://namespace.profile.com/transcript/t">
+<xsd:schema 
+    xmlns:t="http://namespace.profile.com/ns/transcript"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://namespace.profile.com/ns/transcript"
+    elementFormDefault="qualified">
+    
     <xsd:element name="transcript">
         <xsd:complexType>
             <xsd:sequence>
