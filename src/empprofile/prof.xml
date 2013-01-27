@@ -9,7 +9,7 @@ and open the template in the editor.
     xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
     xmlns:app='http://namespace.profile.com/ns/profile'
     xsi:schemaLocation='http://namespace.profile.com/ns/profile profile.xsd'>
-    <cv_info></cv_info>
+    <cv_info>
     <name>dhf</name>
     <address>hgs</address>
     <telephone>464364</telephone>
@@ -28,6 +28,7 @@ and open the template in the editor.
     <desiredPosition>sty</desiredPosition>
     <references>stdu</references>
     <motivation>stuw</motivation>
+    </cv_info>
     <empRecord>
         <empName>twwww</empName>
         <workedAt>stwwhw</workedAt>

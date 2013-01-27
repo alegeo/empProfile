@@ -20,7 +20,9 @@ namespace="http://namespace.profile.com/ns/transcript" />
     <xsd:element name="profile">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="cv_info" type="cv:cvType"/>
+                <xsd:element name="cv_info" >
+                    <xsd:complexType>
+                        <xsd:sequence>
                                 <xsd:element name="name" type="xsd:string"/>
                                 <xsd:element name="address" type="xsd:string"/>
 				<xsd:element name="telephone" type="xsd:string" maxOccurs="unbounded"/>
@@ -40,7 +42,9 @@ namespace="http://namespace.profile.com/ns/transcript" />
                                 <xsd:element name="desiredPosition" type="xsd:string"/>
                                 <xsd:element name="references" type="xsd:string"/>
 				<xsd:element name="motivation" type="xsd:string"/>
-                                   	
+                          </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
                 
                 <xsd:element name="empRecord" minOccurs="0" maxOccurs="unbounded">
                         <xsd:complexType>
