@@ -1,4 +1,4 @@
-package mypack;
+package empprofile;
 
 import java.io.*;
 

@@ -5,12 +5,12 @@ targetNamespace="http://namespace.profile.com/transcript/t">
     <xsd:element name="transcript">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="name" type="xsd:string"/>
+                <xsd:element name="studentName" type="xsd:string"/>
 				<xsd:group name="transcriptInfo">
 				<xsd:sequence>
 					<xsd:element name="university" type="xsd:string"/>
 					<xsd:element name="program" type="xsd:string"/>
-					<xsd:element name="issue-date" type="xsd:date"/>
+					<xsd:element name="issueDate" type="xsd:date"/>
 				</xsd:sequence>
 				</xsd:group>
                 <xsd:element name="courses">
