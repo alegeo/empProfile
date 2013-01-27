@@ -4,18 +4,20 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 targetNamespace="http://namespace.profile.com/companyInfo/com">
     <xsd:element name="companyInfo">
         <xsd:complexType>
-        <xsd:element name="company">
-        <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="companyName" type="xsd:string"/>
-                <xsd:element name="category" type="xsd:string"/>
-                <xsd:element name="founders" type="xsd:string"/>
-                <xsd:element name="ceo" type="xsd:string"/>
-                <xsd:element name="location" type="xsd:string"/>
-                <xsd:element name="contact" type="xsd:string"/>
+                <xsd:element name="company">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="companyName" type="xsd:string"/>
+                        <xsd:element name="category" type="xsd:string"/>
+                        <xsd:element name="founders" type="xsd:string"/>
+                        <xsd:element name="ceo" type="xsd:string"/>
+                        <xsd:element name="location" type="xsd:string"/>
+                        <xsd:element name="contact" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+                </xsd:element>
             </xsd:sequence>
-        </xsd:complexType>
-        </xsd:element>
         </xsd:complexType>
     </xsd:element>              
 </xsd:schema>
