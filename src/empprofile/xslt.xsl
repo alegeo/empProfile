@@ -3,7 +3,7 @@
 <xsl:output method="xml" />
 <xsl:variable name="empRecord" select="document('empRecord.xml')/empRecord"/>
 <xsl:variable name="companyInfo" select="document('companyInfo.xml')/companyInfo"/>
-<xsl:variable name="transcript" select="document('transcript2.xml')/transcript"/> 
+<xsl:variable name="transcript" select="document('transcript.xml')/transcript"/> 
     <xsl:template match="/" > 
             <profile>
                 <cv_info>
