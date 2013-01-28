@@ -6,6 +6,7 @@
                   xmlns:e='http://namespace.profile.com/ns/empRecord'
                   xmlns:app='http://namespace.profile.com/ns/profile'
                   app:schemaLocation='http://namespace.profile.com/profile profile.xsd'>
+                      
 <xsl:output method="xml" />
 <xsl:variable name="empRecord" select="document('empRecord.xml')/e:empRecord"/>
 <xsl:variable name="companyInfo" select="document('companyInfo.xml')/com:companyInfo/com:companies"/>
