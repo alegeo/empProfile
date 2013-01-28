@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<ns1:profile
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns:ns1='http://namespace.profile.com/profile'
+    xsi:schemaLocation='http://namespace.profile.com/profile profile.xsd'>
+    <cv_info>
+        <name></name>
+        <address></address>
+        <telephone></telephone>
+        <telephone></telephone>
+        <telephone></telephone>
+        <email></email>
+        <email></email>
+        <email></email>
+        <education>
+            <university></university>
+            <program></program>
+            <gpa></gpa>
+        </education>
+        <language></language>
+        <language></language>
+        <language></language>
+        <qualifications></qualifications>
+        <jobType></jobType>
+        <desiredPosition></desiredPosition>
+        <references></references>
+        <motivation></motivation>
+    </cv_info>
+    <empRecord>
+        <name></name>
+        <category></category>
+        <contact></contact>
+        <year></year>
+        <duration></duration>
+        <position></position>
+    </empRecord>
+    <empRecord>
+        <name></name>
+        <category></category>
+        <contact></contact>
+        <year></year>
+        <duration></duration>
+        <position></position>
+    </empRecord>
+    <empRecord>
+        <name></name>
+        <category></category>
+        <contact></contact>
+        <year></year>
+        <duration></duration>
+        <position></position>
+    </empRecord>
+    <companyInfo>
+        <company_name></company_name>
+        <category></category>
+        <founders></founders>
+        <ceo></ceo>
+        <location></location>
+        <contact></contact>
+    </companyInfo>
+
+</ns1:profile>
