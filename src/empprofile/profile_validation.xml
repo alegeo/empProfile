@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<app:app:profile
+<app:profile
     xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
     xmlns:app='http://namespace.profile.com/profile'
     xsi:schemaLocation='http://namespace.profile.com/profile profile.xsd'>
@@ -73,4 +73,4 @@
         </app:courses>
     </app:transcript>
 
-</app:app:profile>
+</app:profile>
