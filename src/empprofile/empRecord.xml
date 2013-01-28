@@ -5,7 +5,8 @@
     xsi:schemaLocation='http://namespace.profile.com/ns/empRecord empRecord.xsd'>
     <e:empName>Annabelle White</e:empName>
     <e:companyWorked>
-        <e:workedAt>Google</e:workedAt>
+        <e:workedAtComId>1</e:workedAtComId>
+        <e:workedAt>Nokia</e:workedAt>
         <e:duration>18 months</e:duration>
         <e:year>2011</e:year>
         <e:position>Software Developer</e:position>

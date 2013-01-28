@@ -12,6 +12,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.TransformerFactoryConfigurationError;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+import org.w3c.dom.Attr;
 import org.w3c.dom.DOMException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -143,6 +144,12 @@ public class DOMParser {
                     empName.setTextContent(eEmpName.item(0).getTextContent());
                     empRecord.appendChild(empName);
 
+                    // workedAtComId elements
+                    Element workedAtComId = proDoc.createElementNS(namespace, "app:workedAtComId");
+                    NodeList eWorkedAtComId= eDoc.getElementsByTagName("e:workedAtComId");
+                    workedAtComId.setTextContent(eWorkedAtComId.item(0).getTextContent());
+                    empRecord.appendChild(workedAtComId);
+                    
                     // workedAt elements
                     Element workedAt = proDoc.createElementNS(namespace, "app:workedAt");
                     NodeList eWorkedAt= eDoc.getElementsByTagName("e:workedAt");
@@ -172,9 +179,28 @@ public class DOMParser {
         rootElement.appendChild(companyInfo);
 
             //company elements
-            Element company = proDoc.createElementNS(namespace, "app:company");
-            companyInfo.appendChild(company);
-
+            Element companies = proDoc.createElementNS(namespace, "app:companies");
+            companyInfo.appendChild(companies);
+              
+                    NodeList comCompany = tDoc.getElementsByTagName("app:company");
+                    NodeList tCom = ((Element)comCompany.item(0)).getElementsByTagName("com:company");
+                    for(int i = 0; i < tCom.getLength(); i++) {
+                    if (((Element)comCompany.item(i)).getElementsByTagName("e:workedAtComId").item(0).getTextContent() ==
+                            ((Element)eWorkedAtComId.item(0)).getElementsByTagName("com:companyId").item(i).getTextContent()){
+                    Element course = proDoc.createElementNS(namespace, "app:course");
+                    companyInfo.appendChild(course);
+                    
+                    break;
+                    }
+            
+            }                   
+                    
+            
+                    //companyId elements
+                    Element companyId = proDoc.createElementNS(namespace, "app:companyId");
+                    NodeList comcompanyId= comDoc.getElementsByTagName("com:companyId");
+                    companyId.setTextContent(comcompanyId.item(0).getTextContent());
+                    companyInfo.appendChild(companyId);
 
                     //companyName elements
                     Element companyName = proDoc.createElementNS(namespace, "app:companyName");
@@ -246,33 +272,38 @@ public class DOMParser {
                     Element courses = proDoc.createElementNS(namespace, "app:courses");
                     transcript.appendChild(courses);
 
-                    // course elements
+                    
+                    NodeList tCourses = tDoc.getElementsByTagName("t:courses");
+                    NodeList tCourse = ((Element)tCourses.item(0)).getElementsByTagName("t:course");
+                    for(int i = 0; i < tCourse.getLength(); i++) {
+                    //course elements
                     Element course = proDoc.createElementNS(namespace, "app:course");
                     transcript.appendChild(course);
-
-                    // code elements
+                             
+                    // code elements    
                     Element code = proDoc.createElementNS(namespace, "app:code");
-                    NodeList tCode= tDoc.getElementsByTagName("t:code");
+                    NodeList tCode = ((Element)tCourse.item(i)).getElementsByTagName("t:code");
                     code.setTextContent(tCode.item(0).getTextContent());
-                    transcript.appendChild(code);
-
+                    course.appendChild(code);
+                   
                     // title elements
                     Element title = proDoc.createElementNS(namespace, "app:title");
-                    NodeList tTitle= tDoc.getElementsByTagName("t:title");
+                    NodeList tTitle = ((Element)tCourse.item(i)).getElementsByTagName("t:title");
                     title.setTextContent(tTitle.item(0).getTextContent());
-                    transcript.appendChild(title);
+                    course.appendChild(title);
 
                     // credits elements
                     Element credits = proDoc.createElementNS(namespace, "app:credits");
-                    NodeList tCredits= tDoc.getElementsByTagName("t:credits");
+                    NodeList tCredits = ((Element)tCourse.item(i)).getElementsByTagName("t:credits");
                     credits.setTextContent(tCredits.item(0).getTextContent());
-                    transcript.appendChild(credits);
+                    course.appendChild(credits);
 
                     // grade elements
                     Element grade = proDoc.createElementNS(namespace, "app:grade");
-                    NodeList tGrade= tDoc.getElementsByTagName("t:grade");
+                    NodeList tGrade = ((Element)tCourse.item(i)).getElementsByTagName("t:grade");
                     grade.setTextContent(tGrade.item(0).getTextContent());
-                    transcript.appendChild(grade);
+                    course.appendChild(grade);
+                    }
 
             // write the content into xml file
             TransformerFactory transformerFactory = TransformerFactory.newInstance();

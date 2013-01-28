@@ -6,21 +6,28 @@
     elementFormDefault="qualified"> 
         
     <xsd:element name="companyInfo">
-        <xsd:complexType>
-            <xsd:sequence>
-                <xsd:element name="company" maxOccurs="unbounded">
-                <xsd:complexType>
-                    <xsd:sequence>
-                        <xsd:element name="companyName" type="xsd:string"/>
-                        <xsd:element name="category" type="xsd:string"/>
-                        <xsd:element name="founders" type="xsd:string"/>
-                        <xsd:element name="ceo" type="xsd:string"/>
-                        <xsd:element name="location" type="xsd:string"/>
-                        <xsd:element name="contact" type="xsd:string"/>
+        <xsd:element name="companies">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="company" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="companyId" type="xsd:string"/>
+                                        <xsd:element name="companyName" type="xsd:string"/>
+                                        <xsd:element name="category" type="xsd:string"/>
+                                        <xsd:element name="founders" type="xsd:string"/>
+                                        <xsd:element name="ceo" type="xsd:string"/>
+                                        <xsd:element name="location" type="xsd:string"/>
+                                        <xsd:element name="contact" type="xsd:string"/>
+                                    </xsd:sequence> 
+                                </xsd:complexType>
+                                </xsd:element>
+                            </xsd:sequence>
+                        </xsd:complexType>
                     </xsd:sequence>
-                </xsd:complexType>
-                </xsd:element>
-            </xsd:sequence>
         </xsd:complexType>
-    </xsd:element>              
+        </xsd:element>
+    </xsd:element>           
 </xsd:schema>

@@ -15,7 +15,7 @@
     </app:cv_info>
     <app:empRecord>
         <app:empName>Annabelle White</app:empName>
-        <app:workedAt>Nokia</app:workedAt>
+        <app:workedAt>Google</app:workedAt>
         <app:duration>18 months</app:duration>
         <app:year>2011</app:year>
         <app:position>Software Developer</app:position>
@@ -35,29 +35,10 @@
         <app:program>Masters Software Engineering of Distributed Systems</app:program>
         <app:issueDate>2012-12-23</app:issueDate>
         <app:courses/>
-        <app:course>
-            <app:code>IK2210</app:code>
-            <app:title>Distributed Systems, Basic Course</app:title>
-            <app:credits>7.5</app:credits>
-            <app:grade>A</app:grade>
-        </app:course>
-        <app:course>
-            <app:code>IB2210</app:code>
-            <app:title>Modern Methods in Software Engineering</app:title>
-            <app:credits>7.5</app:credits>
-            <app:grade>B</app:grade>
-        </app:course>
-        <app:course>
-            <app:code>IB2210</app:code>
-            <app:title>Distributed Artificial Intelligence and Intelligent Agents</app:title>
-            <app:credits>7.5</app:credits>
-            <app:grade>A</app:grade>
-        </app:course>
-        <app:course>
-            <app:code>ID1234</app:code>
-            <app:title>Network Programming in Java</app:title>
-            <app:credits>6</app:credits>
-            <app:grade>B</app:grade>
-        </app:course>
+        <app:course/>
+        <app:code>IK2210</app:code>
+        <app:title>Distributed Systems, Basic Course</app:title>
+        <app:credits>7.5</app:credits>
+        <app:grade>A</app:grade>
     </app:transcript>
 </app:profile>
