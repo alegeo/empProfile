@@ -51,7 +51,7 @@
                 <xsl:for-each select="$companyInfo/*/com:companyId">
                 <xsl:choose>
                 <xsl:when test=". = $companyWorked">
-                <app:companyInfo> 
+                <app:company> 
                    <app:companyId><xsl:value-of select="../com:companyId"/></app:companyId>
                    <app:name><xsl:value-of select="../com:companyName"/></app:name>
                    <app:category><xsl:value-of select="../com:category"/></app:category>
@@ -59,7 +59,7 @@
                    <app:ceo><xsl:value-of select="../com:ceo"/></app:ceo>
                    <app:location><xsl:value-of select="../com:location"/></app:location>
                    <app:contact><xsl:value-of select="../com:contact"/></app:contact>
-                </app:companyInfo> 
+                </app:company> 
                 </xsl:when>
                 <xsl:otherwise />
                 </xsl:choose>    
@@ -74,8 +74,8 @@
             <app:program><xsl:value-of select="$transcript/t:program"/></app:program> 
             <app:issueDate><xsl:value-of select="$transcript/t:issueDate"/></app:issueDate>
             <!-- <xsl:value-of select=" (4*(sum($transcript/courses/course[grade='A']/credits)) + 3*(sum($transcript/courses/course[grade='B']/credits)) + 2*(sum($transcript/courses/course[grade='C']/credits)) + 1*(sum($transcript/courses/course[grade='D']/credits))) div (sum($transcript/courses/course/credits))"/>  -->
-            <app:GPA><xsl:value-of select="format-number( (4*(sum($transcript/t:courses/t:course[t:grade='A']/t:credits)) + 3*(sum($transcript/t:courses/t:course[t:grade='B']/t:credits)) + 2*(sum($transcript/t:courses/t:course[t:grade='C']/t:credits)) + 1*(sum($transcript/t:courses/t:course[t:grade='D']/t:credits))) div (sum($transcript/t:courses/t:course/t:credits)), '#.000')"/>
-            </app:GPA>
+            <app:gpa><xsl:value-of select="format-number( (4*(sum($transcript/t:courses/t:course[t:grade='A']/t:credits)) + 3*(sum($transcript/t:courses/t:course[t:grade='B']/t:credits)) + 2*(sum($transcript/t:courses/t:course[t:grade='C']/t:credits)) + 1*(sum($transcript/t:courses/t:course[t:grade='D']/t:credits))) div (sum($transcript/t:courses/t:course/t:credits)), '#.000')"/>
+            </app:gpa>
             <app:courses>
             <xsl:for-each select="$transcript/t:courses/t:course">
                 <app:course>

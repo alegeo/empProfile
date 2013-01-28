@@ -63,7 +63,7 @@ namespace="http://namespace.profile.com/transcript/t" />
                         <xsd:element name="companies">
                             <xsd:complexType>
                                 <xsd:sequence>
-                                        <xsd:element name="company" maxOccurs="unbounded">
+                                        <xsd:element name="company" minOccurs="0" maxOccurs="unbounded">
                                             <xsd:complexType>
                                             <xsd:sequence>
                                                 <xsd:element name="companyId" type="xsd:string"/>
