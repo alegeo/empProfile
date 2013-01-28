@@ -44,20 +44,26 @@
                 </empRecord>
                 </xsl:for-each>
                 
+                <xsl:value-of select="$companyWorked"/>
+                <xsl:for-each select="$companyInfo/*/com:companyId">
+                <xsl:value-of select="."/><ROAR/></xsl:for-each>
+                
+     
+                <xsl:for-each select="$companyInfo/*/com:companyId">
                 <xsl:choose>
-                <xsl:when test="$companyInfo/com:company/com:companyId = $companyWorked">
-                <companyInfo>    
-                   <name><xsl:value-of select="$companyInfo/com:company/com:companyName"/></name>
-                   <category><xsl:value-of select="$companyInfo/com:company/com:category"/></category>
-                   <founders><xsl:value-of select="$companyInfo/com:company/com:founders"/></founders>
-                   <ceo><xsl:value-of select="$companyInfo/com:company/com:ceo"/></ceo>
-                   <location><xsl:value-of select="$companyInfo/com:company/com:location"/></location>
-                   <contact><xsl:value-of select="$companyInfo/com:company/com:contact"/></contact>
+                <xsl:when test=". = $companyWorked">
+                <companyInfo> 
+                   <name><xsl:value-of select="../com:companyName"/></name>
+                   <category><xsl:value-of select="../com:category"/></category>
+                   <founders><xsl:value-of select="../com:founders"/></founders>
+                   <ceo><xsl:value-of select="../com:ceo"/></ceo>
+                   <location><xsl:value-of select="../com:location"/></location>
+                   <contact><xsl:value-of select="../com:contact"/></contact>
                 </companyInfo> 
                 </xsl:when>
                 <xsl:otherwise />
                 </xsl:choose>    
-                 
+                </xsl:for-each> 
         </profile>
     </xsl:template>
         	
