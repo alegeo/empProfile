@@ -12,7 +12,6 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.TransformerFactoryConfigurationError;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import org.w3c.dom.Attr;
 import org.w3c.dom.DOMException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -28,10 +27,10 @@ public class DOMParser {
     public static void main(String[] args){
      
         DOMParser d = new DOMParser();
-        d.generateProfile();
+        d.createProfile();
       }
 
-    public void generateProfile(){
+    public void createProfile(){
  
         try {
             DocumentBuilderFactory dFactory = DocumentBuilderFactory.newInstance();
@@ -143,100 +142,95 @@ public class DOMParser {
                     NodeList eEmpName= eDoc.getElementsByTagName("e:empName");
                     empName.setTextContent(eEmpName.item(0).getTextContent());
                     empRecord.appendChild(empName);
+                    
+                    
+                //companyWorked elements
+                Element companyWorked = proDoc.createElementNS(namespace, "app:companyWorked");
+                empRecord.appendChild(companyWorked);
 
                     // workedAtComId elements
                     Element workedAtComId = proDoc.createElementNS(namespace, "app:workedAtComId");
                     NodeList eWorkedAtComId= eDoc.getElementsByTagName("e:workedAtComId");
                     workedAtComId.setTextContent(eWorkedAtComId.item(0).getTextContent());
-                    empRecord.appendChild(workedAtComId);
+                    companyWorked.appendChild(workedAtComId);
                     
                     // workedAt elements
                     Element workedAt = proDoc.createElementNS(namespace, "app:workedAt");
                     NodeList eWorkedAt= eDoc.getElementsByTagName("e:workedAt");
                     workedAt.setTextContent(eWorkedAt.item(0).getTextContent());
-                    empRecord.appendChild(workedAt);
+                    companyWorked.appendChild(workedAt);
 
                     // duration elements
                     Element duration = proDoc.createElementNS(namespace, "app:duration");
                     NodeList eDuration= eDoc.getElementsByTagName("e:duration");
                     duration.setTextContent(eDuration.item(0).getTextContent());
-                    empRecord.appendChild(duration);
+                    companyWorked.appendChild(duration);
 
                     // year elements
                     Element year = proDoc.createElementNS(namespace, "app:year");
                     NodeList eYear= eDoc.getElementsByTagName("e:year");
                     year.setTextContent(eYear.item(0).getTextContent());
-                    empRecord.appendChild(year);
+                    companyWorked.appendChild(year);
 
                     // position elements
                     Element position = proDoc.createElementNS(namespace, "app:position");
                     NodeList ePosition= eDoc.getElementsByTagName("e:position");
                     position.setTextContent(ePosition.item(0).getTextContent());
-                    empRecord.appendChild(position);
+                    companyWorked.appendChild(position);
 
        //companyInfo elements
         Element companyInfo = proDoc.createElementNS(namespace, "app:companyInfo");
         rootElement.appendChild(companyInfo);
-
-            //company elements
+        
+            //companies elements
             Element companies = proDoc.createElementNS(namespace, "app:companies");
             companyInfo.appendChild(companies);
-              
-                    NodeList comCompany = tDoc.getElementsByTagName("app:company");
-                    NodeList tCom = ((Element)comCompany.item(0)).getElementsByTagName("com:company");
-                    for(int i = 0; i < tCom.getLength(); i++) {
-                    if (((Element)comCompany.item(i)).getElementsByTagName("e:workedAtComId").item(0).getTextContent() ==
-                            ((Element)eWorkedAtComId.item(0)).getElementsByTagName("com:companyId").item(i).getTextContent()){
-                    Element course = proDoc.createElementNS(namespace, "app:course");
-                    companyInfo.appendChild(course);
-                    
-                    break;
-                    }
-            
-            }                   
-                    
-            
+
+                    //company elements
+                    Element company = proDoc.createElementNS(namespace, "app:company");
+                    companies.appendChild(company);
+
                     //companyId elements
                     Element companyId = proDoc.createElementNS(namespace, "app:companyId");
-                    NodeList comcompanyId= comDoc.getElementsByTagName("com:companyId");
-                    companyId.setTextContent(comcompanyId.item(0).getTextContent());
-                    companyInfo.appendChild(companyId);
+                    NodeList comCompanyId= comDoc.getElementsByTagName("com:companyId");
+                    companyId.setTextContent(comCompanyId.item(0).getTextContent());
+                    companies.appendChild(companyId);
 
                     //companyName elements
                     Element companyName = proDoc.createElementNS(namespace, "app:companyName");
                     NodeList comCompanyName= comDoc.getElementsByTagName("com:companyName");
                     companyName.setTextContent(comCompanyName.item(0).getTextContent());
-                    companyInfo.appendChild(companyName);
+                    companies.appendChild(companyName);
 
                     // category elements
                     Element category = proDoc.createElementNS(namespace, "app:category");
                     NodeList comCategory= comDoc.getElementsByTagName("com:category");
                     category.setTextContent(comCategory.item(0).getTextContent());
-                    companyInfo.appendChild(category);
+                    companies.appendChild(category);
 
                     // founders elements
                     Element founders = proDoc.createElementNS(namespace, "app:founders");
                     NodeList comFounders= comDoc.getElementsByTagName("com:founders");
                     founders.setTextContent(comFounders.item(0).getTextContent());
-                    companyInfo.appendChild(founders);
+                    companies.appendChild(founders);
 
                     // ceo elements
                     Element ceo = proDoc.createElementNS(namespace, "app:ceo");
                     NodeList comCeo= comDoc.getElementsByTagName("com:ceo");
                     ceo.setTextContent(comCeo.item(0).getTextContent());
-                    companyInfo.appendChild(ceo);
+                    companies.appendChild(ceo);
 
                     // location elements
                     Element location = proDoc.createElementNS(namespace, "app:location");
                     NodeList comLocation= comDoc.getElementsByTagName("com:location");
                     location.setTextContent(comLocation.item(0).getTextContent());
-                    companyInfo.appendChild(location);    
+                    companies.appendChild(location);    
 
                     // contact elements
                     Element contact = proDoc.createElementNS(namespace, "app:contact");
                     NodeList comContact= comDoc.getElementsByTagName("com:contact");
                     contact.setTextContent(comContact.item(0).getTextContent());
-                    companyInfo.appendChild(contact);  
+                    companies.appendChild(contact);  
 
         //transcript elements
         Element transcript = proDoc.createElementNS(namespace, "app:transcript");
