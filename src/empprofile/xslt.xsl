@@ -4,7 +4,8 @@
                   xmlns:com='http://namespace.profile.com/ns/com'
                   xmlns:t='http://namespace.profile.com/ns/transcript'
                   xmlns:e='http://namespace.profile.com/ns/empRecord'
-                  xmlns:app='http://namespace.profile.com/ns/profile'>
+                  xmlns:app='http://namespace.profile.com/ns/profile'
+                  app:schemaLocation='http://namespace.profile.com/profile profile.xsd'>
 <xsl:output method="xml" />
 <xsl:variable name="empRecord" select="document('empRecord.xml')/e:empRecord"/>
 <xsl:variable name="companyInfo" select="document('companyInfo.xml')/com:companyInfo/com:companies"/>
@@ -43,12 +44,7 @@
                     <position><xsl:value-of select="$empRecord/e:companyWorked/e:position"/></position>
                 </empRecord>
                 </xsl:for-each>
-                
-                <xsl:value-of select="$companyWorked"/>
-                <xsl:for-each select="$companyInfo/*/com:companyId">
-                <xsl:value-of select="."/><ROAR/></xsl:for-each>
-                
-     
+                    
                 <xsl:for-each select="$companyInfo/*/com:companyId">
                 <xsl:choose>
                 <xsl:when test=". = $companyWorked">
