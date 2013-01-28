@@ -3,9 +3,7 @@
     xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
     xmlns:com='http://namespace.profile.com/ns/com'
     xsi:schemaLocation='http://namespace.profile.com/ns/com companyInfo.xsd'>
-    <com:companies>
     <com:company>
-        <com:companyId>1</com:companyId>
         <com:companyName>Nokia</com:companyName>
         <com:category>Telecommunications</com:category>
         <com:founders>Fredrik Idestam, Leo Mechelin</com:founders>
@@ -15,7 +13,6 @@
     </com:company>
     
     <com:company>
-        <com:companyId>2</com:companyId>
         <com:companyName>Oracle</com:companyName>
         <com:category>Enterprise software, Computer hardware</com:category>
         <com:founders>Larry Ellison, Bob Miner, Ed Oates</com:founders>
@@ -25,8 +22,7 @@
     </com:company>
     
     <com:company>
-        <com:companyId>3</com:companyId>
-        <com:companyName>Google</com:companyName>
+        <com:companyName>Google Inc.</com:companyName>
         <com:category>Internet, Computer software</com:category>
         <com:founders>Larry Page, Sergey Brin</com:founders>
         <com:ceo>Larry Page</com:ceo>
@@ -35,7 +31,6 @@
     </com:company>
     
     <com:company>
-        <com:companyId>4</com:companyId>
         <com:companyName>Facebook</com:companyName>
         <com:category>Social networking services</com:category>
         <com:founders>Mark Zuckerberg, Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, Chris Hughes</com:founders>
@@ -43,7 +38,7 @@
         <com:location>Menlo Park, California, United States</com:location>
         <com:contact>4-903-434-2655</com:contact>
     </com:company>
-    </com:companies>
+    
     
 
 </com:companyInfo>
