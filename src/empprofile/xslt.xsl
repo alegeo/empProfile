@@ -41,19 +41,19 @@
                 
                 <xsl:choose>
                 <xsl:when test="$companyInfo/com:company/com:companyId = $companyWorked">
-                <companyInfo>    
-                   <name><xsl:value-of select="$companyInfo/com:company/com:companyName"/></name>
-                   <category><xsl:value-of select="$companyInfo/com:company/com:category"/></category>
-                   <founders><xsl:value-of select="$companyInfo/com:company/com:founders"/></founders>
-                   <ceo><xsl:value-of select="$companyInfo/com:company/com:ceo"/></ceo>
-                   <location><xsl:value-of select="$companyInfo/com:company/com:location"/></location>
-                   <contact><xsl:value-of select="$companyInfo/com:company/com:contact"/></contact>
-                </companyInfo> 
+                <app:companyInfo>    
+                   <app:name><xsl:value-of select="$companyInfo/com:company/com:companyName"/></app:name>
+                   <app:category><xsl:value-of select="$companyInfo/com:company/com:category"/></app:category>
+                   <app:founders><xsl:value-of select="$companyInfo/com:company/com:founders"/></app:founders>
+                   <app:ceo><xsl:value-of select="$companyInfo/com:company/com:ceo"/></app:ceo>
+                   <app:location><xsl:value-of select="$companyInfo/com:company/com:location"/></app:location>
+                   <app:contact><xsl:value-of select="$companyInfo/com:company/com:contact"/></app:contact>
+                </app:companyInfo> 
                 </xsl:when>
                 <xsl:otherwise />
                 </xsl:choose>    
                  
-        </profile>
+        </app:profile>
     </xsl:template>
         	
 </xsl:stylesheet>	
