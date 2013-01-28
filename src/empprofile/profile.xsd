@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:app="http://namespace.profile.com/profile"
-	targetNamespace="http://namespace.profile.com/profile"
+<xsd:schema xmlns:app="http://namespace.profile.com/ns/profile"
+	targetNamespace="http://namespace.profile.com/ns/profile"
         xmlns:xsd="http://www.w3.org/2001/XMLSchema"	
-        xmlns:e="http://namespace.profile.com/empRecord"
-	xmlns:cv="http://namespace.profile.com/cv"
-	xmlns:com="http://namespace.profile.com/companyInfo"
-	xmlns:t="http://namespace.profile.com/transcript"
+        xmlns:e="http://namespace.profile.com/ns/empRecord"
+	xmlns:cv="http://namespace.profile.com/ns/cv"
+	xmlns:com="http://namespace.profile.com/ns/companyInfo"
+	xmlns:t="http://namespace.profile.com/ns/transcript"
 	elementFormDefault="qualified">
+<!--
 <xsd:import schemaLocation="empRecord.xsd"
 namespace="http://namespace.profile.com/empRecord/e" />
 <xsd:import schemaLocation="cv.xsd"
@@ -15,7 +16,7 @@ namespace="http://namespace.profile.com/cv" />
 namespace="http://namespace.profile.com/companyInfo/com" />
 <xsd:import schemaLocation="transcript.xsd"
 namespace="http://namespace.profile.com/transcript/t" />
-
+-->
     <xsd:element name="profile">
         <xsd:complexType>
             <xsd:sequence>
@@ -89,7 +90,7 @@ namespace="http://namespace.profile.com/transcript/t" />
                             <xsd:element name="university" type="xsd:string"/>
                             <xsd:element name="program" type="xsd:string"/>
                             <xsd:element name="issueDate" type="xsd:date"/>
-							<xsd:element name="gpa" type="xsd:decimal" minOccurs="0"/>
+                            <xsd:element name="gpa" type="xsd:decimal" minOccurs="0"/>
                             <xsd:element name="courses">
                                 <xsd:complexType>
                                     <xsd:sequence>

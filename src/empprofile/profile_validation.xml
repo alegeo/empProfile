@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <app:profile
     xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
-    xmlns:app='http://namespace.profile.com/profile'
-    xsi:schemaLocation='http://namespace.profile.com/profile profile.xsd'>
+    xmlns:app='http://namespace.profile.com/ns/profile'
+    xsi:schemaLocation='http://namespace.profile.com/ns/profile profile.xsd'>
     <app:cv_info>
         <app:name></app:name>
         <app:address></app:address>
