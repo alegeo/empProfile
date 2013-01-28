@@ -89,6 +89,7 @@ namespace="http://namespace.profile.com/transcript/t" />
                             <xsd:element name="university" type="xsd:string"/>
                             <xsd:element name="program" type="xsd:string"/>
                             <xsd:element name="issueDate" type="xsd:date"/>
+							<xsd:element name="gpa" type="xsd:decimal" minOccurs="0"/>
                             <xsd:element name="courses">
                                 <xsd:complexType>
                                     <xsd:sequence>
