@@ -1,12 +1,17 @@
 <?xml version="1.0"?>
-<xsl:stylesheet xmlns:app="http://www.profile.com/ns/profile">
+<xsl:stylesheet xmlns:xsl='http://www.w3.org/1999/XSL/Transform' version="1.0"
+                  xmlns:apcv='http://namespace.profile.com/ns/cv'
+                  xmlns:com='http://namespace.profile.com/ns/com'
+                  xmlns:t='http://namespace.profile.com/ns/transcript'
+                  xmlns:e='http://namespace.profile.com/ns/empRecord'
+                  xmlns:app='http://namespace.profile.com/ns/profile'>
 <xsl:output method="xml" />
 <xsl:variable name="empRecord" select="document('empRecord.xml')/e:empRecord"/>
 <xsl:variable name="companyInfo" select="document('companyInfo.xml')/com:companyInfo/com:companies"/>
 <xsl:variable name="transcript" select="document('transcript.xml')/t:transcript"/> 
 
     <xsl:template match="apcv:cv" > 
-            <profile>
+            <app:profile>
                 <app:cv_info>
                 <app:name><xsl:value-of select="apcv:name" /> </app:name>
                 <app:address><xsl:value-of select="apcv:address" /> </app:address>
@@ -27,7 +32,7 @@
                 <app:desiredPosition><xsl:value-of select="apcv:desiredPosition" /></app:desiredPosition>
                 <app:references><xsl:value-of select="apcv:references" /> </app:references>
                 <app:motivation><xsl:value-of select="apcv:motivation" /> </app:motivation>
-                </cv_info>
+                </app:cv_info>
                 
                 <xsl:variable name="companyWorked" select="$empRecord/e:companyWorked/e:workedAtComId"/>
                 <xsl:for-each select="$empRecord/e:companyWorked">
