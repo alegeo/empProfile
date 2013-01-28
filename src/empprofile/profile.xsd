@@ -24,8 +24,8 @@ namespace="http://namespace.profile.com/transcript/t" />
                         <xsd:sequence>
                                 <xsd:element name="name" type="xsd:string"/>
                                 <xsd:element name="address" type="xsd:string"/>
-				<xsd:element name="telephone" type="xsd:string" maxOccurs="unbounded"/>
-				<xsd:element name="email" type="xsd:string" maxOccurs="unbounded"/>			
+				<xsd:element name="telephone" type="xsd:string"/>
+				<xsd:element name="email" type="xsd:string" />			
 				<xsd:element name="education" minOccurs="0">
 					<xsd:complexType>
 						<xsd:sequence>
