@@ -34,7 +34,7 @@
                 </app:cv_info>
                 
                 <app:empRecord>
-                
+                <app:empName><xsl:value-of select="$empRecord/e:empName"/></app:empName>
                 <xsl:for-each select="$empRecord/e:companyWorked">
                 <app:companyWorked>  
                     <app:workedAtComId><xsl:value-of select="./e:workedAtComId"/></app:workedAtComId>
@@ -53,7 +53,7 @@
                 <xsl:when test=". = $companyWorked">
                 <app:company> 
                    <app:companyId><xsl:value-of select="../com:companyId"/></app:companyId>
-                   <app:name><xsl:value-of select="../com:companyName"/></app:name>
+                   <app:companyName><xsl:value-of select="../com:companyName"/></app:companyName>
                    <app:category><xsl:value-of select="../com:category"/></app:category>
                    <app:founders><xsl:value-of select="../com:founders"/></app:founders>
                    <app:ceo><xsl:value-of select="../com:ceo"/></app:ceo>
