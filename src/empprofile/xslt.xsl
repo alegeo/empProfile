@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
+<xsl:stylesheet xmlns:xsl='http://www.w3.org/1999/XSL/Transform' version="1.0"
                   xmlns:apcv='http://namespace.profile.com/ns/cv'
-                  xmlns:com="http://namespace.profile.com/ns/com"
+                  xmlns:com='http://namespace.profile.com/ns/com'
                   xmlns:t='http://namespace.profile.com/ns/transcript'
-                  xmlns:e="http://namespace.profile.com/empRecord/e">
+                  xmlns:e='http://namespace.profile.com/ns/empRecord'>
 <xsl:output method="xml" />
 <xsl:variable name="empRecord" select="document('empRecord.xml')/e:empRecord"/>
-<xsl:variable name="companyInfo" select="document('companyInfo.xml')/com:companyInfo"/>
+<xsl:variable name="companyInfo" select="document('companyInfo.xml')/com:companyInfo/com:companies"/>
 <xsl:variable name="transcript" select="document('transcript.xml')/t:transcript"/> 
 
     <xsl:template match="apcv:cv" > 
@@ -33,31 +33,25 @@
                 <motivation><xsl:value-of select="apcv:motivation" /> </motivation>
                 </cv_info>
                 
-                <xsl:value-of select="$empRecord"/>
-                <xsl:value-of select="$empRecord/e:empName"/>
-                
-              <!-- cant call the element of the $empRecord -->
-                <xsl:variable name="companyWorked" select="$empRecord/e:company"/>
-                <xsl:for-each select="$empRecord">
+                <xsl:variable name="companyWorked" select="$empRecord/e:companyWorked/e:workedAtComId"/>
+                <xsl:for-each select="$empRecord/e:companyWorked">
                 <empRecord>  
                     <company><xsl:value-of select="$empRecord/e:companyWorked/e:workedAt"/></company>
-                    <duration><xsl:value-of select="$empRecord/companyWorked/duration"/></duration>
-                    <year><xsl:value-of select="$empRecord/e:year"/></year>
-                    <position><xsl:value-of select="$empRecord/e:position"/></position>
+                    <duration><xsl:value-of select="$empRecord/e:companyWorked/e:duration"/></duration>
+                    <year><xsl:value-of select="$empRecord/e:companyWorked/e:year"/></year>
+                    <position><xsl:value-of select="$empRecord/e:companyWorked/e:position"/></position>
                 </empRecord>
                 </xsl:for-each>
-
-                <xsl:value-of select="$companyWorked"></xsl:value-of>
-                <xsl:value-of select="$companyInfo/com:name"></xsl:value-of>
+                
                 <xsl:choose>
-                <xsl:when test="$companyInfo/company/name = $companyWorked">
+                <xsl:when test="$companyInfo/com:company/com:companyId = $companyWorked">
                 <companyInfo>    
-                   <name><xsl:value-of select="$companyInfo/company/name"/></name>
-                   <category><xsl:value-of select="$companyInfo/company/category"/></category>
-                   <founders><xsl:value-of select="$companyInfo/company/founders"/></founders>
-                   <ceo><xsl:value-of select="$companyInfo/company/ceo"/></ceo>
-                   <location><xsl:value-of select="$companyInfo/company/location"/></location>
-                   <contact><xsl:value-of select="$companyInfo/company/contact"/></contact>
+                   <name><xsl:value-of select="$companyInfo/com:company/com:companyName"/></name>
+                   <category><xsl:value-of select="$companyInfo/com:company/com:category"/></category>
+                   <founders><xsl:value-of select="$companyInfo/com:company/com:founders"/></founders>
+                   <ceo><xsl:value-of select="$companyInfo/com:company/com:ceo"/></ceo>
+                   <location><xsl:value-of select="$companyInfo/com:company/com:location"/></location>
+                   <contact><xsl:value-of select="$companyInfo/com:company/com:contact"/></contact>
                 </companyInfo> 
                 </xsl:when>
                 <xsl:otherwise />
