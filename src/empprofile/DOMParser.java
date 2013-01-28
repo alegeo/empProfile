@@ -309,7 +309,7 @@ public class DOMParser {
             // StreamResult result = new StreamResult(System.out);
             transformer.transform(source, result);
             
-            System.out.println("Profile saved!");
+            System.out.println("Profile created!");
 
       } catch (ParserConfigurationException pce) {
             System.err.println("[ERROR] 1");
