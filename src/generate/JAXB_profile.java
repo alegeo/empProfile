@@ -34,25 +34,25 @@ public class JAXB_profile {
         Marshaller m0 = context0.createMarshaller();
         m0.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
         Unmarshaller um0 = context0.createUnmarshaller();
-        Cv cv = (Cv) um0.unmarshal(new FileReader("src/cv.xml")); 
+        Cv cv = (Cv) um0.unmarshal(new FileReader("src/empprofile/cv.xml")); 
         
         JAXBContext context1 = JAXBContext.newInstance(EmpRecord.class);
         Marshaller m1 = context1.createMarshaller();
         m1.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
         Unmarshaller um1 = context1.createUnmarshaller();
-        EmpRecord empRecord = (EmpRecord) um1.unmarshal(new FileReader("src/empRecord.xml"));
+        EmpRecord empRecord = (EmpRecord) um1.unmarshal(new FileReader("src/empprofile/empRecord.xml"));
         
         JAXBContext context2 = JAXBContext.newInstance(CompanyInfo.class);
         Marshaller m2 = context2.createMarshaller();
         m2.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
         Unmarshaller um2 = context2.createUnmarshaller();
-        CompanyInfo companyInfo = (CompanyInfo) um2.unmarshal(new FileReader("src/companyInfo.xml"));
+        CompanyInfo companyInfo = (CompanyInfo) um2.unmarshal(new FileReader("src/empprofile/companyInfo.xml"));
 
         JAXBContext context3 = JAXBContext.newInstance(Transcript.class);
         Marshaller m3 = context3.createMarshaller();
         m3.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
         Unmarshaller um3 = context3.createUnmarshaller();
-        Transcript transcript = (Transcript) um3.unmarshal(new FileReader("src/transcript.xml"));
+        Transcript transcript = (Transcript) um3.unmarshal(new FileReader("src/empprofile/transcript.xml"));
         
         CvInfo cvinfo = new Profile.CvInfo();
         cvinfo.setName(cv.name);
@@ -122,6 +122,8 @@ public class JAXB_profile {
         trans.courses.getCourse().add(a);
         }
         profile.setTranscript(trans);
+        
+        
         
         JAXBContext profileContext = JAXBContext.newInstance(Profile.class);
         System.out.println("Test point 1");
