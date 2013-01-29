@@ -130,7 +130,7 @@ public class JAXB_profile {
         System.out.println("Test point 2");
         profileMarshaller.setProperty("jaxb.schemaLocation", "http://namespace.profile.com/ns/profile profile.xsd");
         System.out.println("Test point 3");
-        profileMarshaller.marshal(profile, new File("src/jaxb_output.xml"));
+        profileMarshaller.marshal(profile, new File("src/generate/jaxb_output.xml"));
         System.out.println("Test point 4");
         
        } catch (JAXBException e) {System.out.print("JABX");}
