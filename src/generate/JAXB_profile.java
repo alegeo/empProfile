@@ -62,8 +62,7 @@ public class JAXB_profile {
         cvinfo.setEducation(cv.education);
         cvinfo.setJobType(cv.jobType);
         for (int i=0; i<cv.language.size(); i++) {
-            cvinfo.getLanguage().add(cv.language.get(i));
-            cvinfo.language.add(cv.language.get(i));};
+            cvinfo.getLanguage().add(cv.language.get(i));};
         cvinfo.setQualifications(cv.qualifications);
         cvinfo.setDesiredPosition(cv.desiredPosition);
         cvinfo.setReferences(cv.references);
